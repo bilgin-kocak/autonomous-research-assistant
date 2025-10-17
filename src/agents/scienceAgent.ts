@@ -2,6 +2,7 @@ import { GameAgent } from '@virtuals-protocol/game';
 import { researchWorker } from '../workers/researchWorker';
 import { Config } from '../utils/config';
 import { Logger } from '../utils/logger';
+import { coordinator, ResearchWorkflowResult } from '../acp/coordinator';
 import dotenv from 'dotenv';
 
 // Load environment variables
@@ -18,6 +19,11 @@ export interface ResearchState {
   research_gaps_identified: number;
   last_update: string;
   active_hypotheses: string[];
+  peer_reviews_requested: number;
+  hypotheses_approved: number;
+  hypotheses_rejected: number;
+  proposals_created: number;
+  datasets_curated: number;
   status: string;
   capabilities: string[];
 }
@@ -33,13 +39,22 @@ let researchState: ResearchState = {
   research_gaps_identified: 0,
   last_update: new Date().toISOString(),
   active_hypotheses: [],
+  peer_reviews_requested: 0,
+  hypotheses_approved: 0,
+  hypotheses_rejected: 0,
+  proposals_created: 0,
+  datasets_curated: 0,
   status: 'initialized',
   capabilities: [
     'literature_review',
     'hypothesis_generation',
     'gap_analysis',
     'paper_analysis',
-    'research_coordination'
+    'research_coordination',
+    'multi_agent_coordination',
+    'peer_review_integration',
+    'dataset_curation',
+    'on_chain_proposals'
   ]
 };
 
@@ -100,6 +115,91 @@ export function addActiveHypothesis(hypothesisId: string): void {
 }
 
 /**
+ * Record peer review workflow result
+ */
+export function recordPeerReviewWorkflow(result: ResearchWorkflowResult): void {
+  researchState.peer_reviews_requested += 1;
+
+  if (result.approved) {
+    researchState.hypotheses_approved += 1;
+  } else {
+    researchState.hypotheses_rejected += 1;
+  }
+
+  if (result.datasets && result.datasets.length > 0) {
+    researchState.datasets_curated += result.datasets.length;
+  }
+
+  if (result.ready_for_proposal) {
+    researchState.proposals_created += 1;
+  }
+
+  researchState.last_update = new Date().toISOString();
+
+  Logger.info('Peer review workflow recorded', {
+    hypothesis_id: result.hypothesis_id,
+    approved: result.approved,
+    datasets_found: result.datasets?.length || 0,
+    ready_for_proposal: result.ready_for_proposal
+  });
+}
+
+/**
+ * Coordinate multi-agent research workflow
+ * This function orchestrates peer review and dataset curation
+ */
+export async function coordinateHypothesisWorkflow(
+  hypothesisId: string,
+  hypothesis: string,
+  methodology: string,
+  field: string = Config.DEFAULT_RESEARCH_FIELD
+): Promise<ResearchWorkflowResult> {
+  Logger.info('🚀 Initiating multi-agent research workflow', {
+    hypothesis_id: hypothesisId,
+    field
+  });
+
+  try {
+    // Use ACP coordinator to run multi-agent workflow
+    const result = await coordinator.coordinateResearch(
+      hypothesisId,
+      hypothesis,
+      methodology,
+      field
+    );
+
+    // Update agent state
+    recordPeerReviewWorkflow(result);
+
+    // Log results
+    if (result.ready_for_proposal) {
+      Logger.info('✅ Hypothesis ready for on-chain proposal!', {
+        hypothesis_id: hypothesisId,
+        overall_score: result.peer_review.overall_score,
+        datasets_found: result.datasets?.length || 0
+      });
+    } else if (result.approved) {
+      Logger.info('⚠️  Hypothesis approved but no datasets found', {
+        hypothesis_id: hypothesisId
+      });
+    } else {
+      Logger.info('❌ Hypothesis needs improvement', {
+        hypothesis_id: hypothesisId,
+        weaknesses: result.peer_review.weaknesses
+      });
+    }
+
+    return result;
+  } catch (error: any) {
+    Logger.error('Multi-agent workflow failed', {
+      hypothesis_id: hypothesisId,
+      error: error.message
+    });
+    throw error;
+  }
+}
+
+/**
  * Reset agent state (for testing)
  */
 export function resetAgentState(): void {
@@ -110,13 +210,22 @@ export function resetAgentState(): void {
     research_gaps_identified: 0,
     last_update: new Date().toISOString(),
     active_hypotheses: [],
+    peer_reviews_requested: 0,
+    hypotheses_approved: 0,
+    hypotheses_rejected: 0,
+    proposals_created: 0,
+    datasets_curated: 0,
     status: 'reset',
     capabilities: [
       'literature_review',
       'hypothesis_generation',
       'gap_analysis',
       'paper_analysis',
-      'research_coordination'
+      'research_coordination',
+      'multi_agent_coordination',
+      'peer_review_integration',
+      'dataset_curation',
+      'on_chain_proposals'
     ]
   };
 }
@@ -168,6 +277,12 @@ My capabilities include:
    - Track multiple research threads simultaneously
    - Coordinate with other agents for peer review and data curation
    - Maintain comprehensive logs of all research activities
+
+🤝 **Multi-Agent Collaboration**: I work with specialized AI agents via Agent Commerce Protocol (ACP):
+   - **Peer Review Agent**: Evaluates hypotheses for scientific validity, novelty, feasibility, and impact
+   - **Data Curator Agent**: Finds relevant datasets from Kaggle, UCI ML, PubMed Central, data.gov
+   - Only hypotheses that pass peer review (≥7.0/10) proceed to dataset curation
+   - Only research-ready hypotheses (approved + datasets found) create on-chain proposals
 
 🎯 **Current Focus**: ${Config.DEFAULT_RESEARCH_FIELD} research - exploring interventions and mechanisms to extend healthy human lifespan, understand aging processes, and develop therapies for age-related diseases.
 
