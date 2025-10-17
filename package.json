@@ -6,12 +6,16 @@
   "scripts": {
     "build": "tsc",
     "start": "ts-node src/index.ts",
+    "start:continuous": "ts-node src/index.ts --continuous",
+    "start:continuous:5min": "ts-node src/index.ts --continuous 5",
+    "start:debug": "DEBUG=true ts-node src/index.ts",
     "test": "npm run test:fetch && npm run test:analyze && npm run test:hypothesis",
     "test:fetch": "ts-node tests/testFetchPapers.ts",
     "test:analyze": "ts-node tests/testAnalyzePaper.ts",
     "test:hypothesis": "ts-node tests/testGenerateHypothesis.ts",
     "test:agent": "ts-node tests/testResearchAgent.ts",
     "test:pipeline": "ts-node tests/testFullPipeline.ts",
+    "test:longrunning": "ts-node tests/testLongRunning.ts",
     "test:all": "npm run test:fetch && npm run test:analyze && npm run test:hypothesis && npm run test:agent",
     "clean": "rm -rf dist"
   },
