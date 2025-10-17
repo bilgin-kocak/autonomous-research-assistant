@@ -16,6 +16,7 @@
     "test:agent": "ts-node tests/testResearchAgent.ts",
     "test:pipeline": "ts-node tests/testFullPipeline.ts",
     "test:longrunning": "ts-node tests/testLongRunning.ts",
+    "test:multiagent": "ts-node src/test_multi_agent.ts",
     "test:all": "npm run test:fetch && npm run test:analyze && npm run test:hypothesis && npm run test:agent",
     "compile:contracts": "npx hardhat compile",
     "deploy:baseSepolia": "npx hardhat run scripts/deploy.ts --network baseSepolia",
