@@ -345,5 +345,1675 @@
     "type": "INFO",
     "message": "Agent completed all iterations",
     "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:32.390Z",
+    "type": "INFO",
+    "message": "Science Agent initialized",
+    "data": {
+      "name": "Dr. ScienceDAO",
+      "field": "longevity",
+      "workers": [
+        "researchWorker"
+      ],
+      "api_key_set": true
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:32.415Z",
+    "type": "INFO",
+    "message": "🧪 Starting Multi-Agent Workflow Tests\n",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:32.417Z",
+    "type": "INFO",
+    "message": "\n================================================================================",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:32.417Z",
+    "type": "INFO",
+    "message": "Testing Hypothesis: hyp_001",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:32.418Z",
+    "type": "INFO",
+    "message": "================================================================================\n",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:32.418Z",
+    "type": "INFO",
+    "message": "📝 Hypothesis:",
+    "data": {
+      "hypothesis": "Combining senolytics with NAD+ precursors synergistically reduces markers of cellular aging..."
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:32.419Z",
+    "type": "INFO",
+    "message": "🚀 Initiating multi-agent research workflow",
+    "data": {
+      "hypothesis_id": "hyp_001",
+      "field": "longevity and aging research"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:32.420Z",
+    "type": "INFO",
+    "message": "🔄 Starting multi-agent research workflow",
+    "data": {
+      "hypothesis_id": "hyp_001",
+      "field": "longevity and aging research"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:32.420Z",
+    "type": "INFO",
+    "message": "Step 1: Requesting peer review...",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:32.421Z",
+    "type": "INFO",
+    "message": "ACP Job created: job_1760712932421_1 (Peer Review)",
+    "data": {
+      "requestor": "research_agent",
+      "provider": "peer_reviewer"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:32.422Z",
+    "type": "INFO",
+    "message": "Reviewing hypothesis: hyp_001",
+    "data": {
+      "field": "longevity and aging research",
+      "hypothesis_preview": "Combining senolytics with NAD+ precursors synergistically reduces markers of cellular aging"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.846Z",
+    "type": "API_CALL",
+    "message": "API call to OpenAI: SUCCESS (13424ms)",
+    "data": {
+      "endpoint": "OpenAI",
+      "duration": 13424,
+      "success": true
+    },
+    "level": "DEBUG",
+    "duration": 13424
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.847Z",
+    "type": "PERFORMANCE",
+    "message": "Operation 'review_hypothesis' completed in 13424ms",
+    "data": {
+      "operation": "review_hypothesis",
+      "duration": 13424,
+      "success": true,
+      "metadata": {
+        "overall_score": 7.5,
+        "approved": true
+      }
+    },
+    "level": "DEBUG",
+    "duration": 13424
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.848Z",
+    "type": "PEER_REVIEW",
+    "message": "Peer review completed for hyp_001",
+    "data": {
+      "hypothesis_id": "hyp_001",
+      "overall_score": 7.5,
+      "approved": true,
+      "novelty": 7,
+      "feasibility": 8
+    },
+    "agent": "PeerReviewAgent",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.849Z",
+    "type": "INFO",
+    "message": "ACP Job completed: job_1760712932421_1",
+    "data": {
+      "overall_score": 7.5,
+      "approved": true
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.850Z",
+    "type": "INFO",
+    "message": "✓ Peer review complete: APPROVED",
+    "data": {
+      "overall_score": 7.5,
+      "novelty": 7,
+      "feasibility": 8,
+      "impact": 8
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.851Z",
+    "type": "INFO",
+    "message": "Step 2: Requesting dataset curation...",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.852Z",
+    "type": "INFO",
+    "message": "ACP Job created: job_1760712945852_2 (Data Curation)",
+    "data": {
+      "requestor": "research_agent",
+      "provider": "data_curator"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.853Z",
+    "type": "INFO",
+    "message": "Searching for datasets",
+    "data": {
+      "hypothesis": "Combining senolytics with NAD+ precursors synergistically reduces markers of cellular aging",
+      "field": "longevity and aging research",
+      "max_results": 3
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.854Z",
+    "type": "PERFORMANCE",
+    "message": "Operation 'find_datasets' completed in 1ms",
+    "data": {
+      "operation": "find_datasets",
+      "duration": 1,
+      "success": true,
+      "metadata": {
+        "datasets_found": 3,
+        "field": "longevity and aging research"
+      }
+    },
+    "level": "DEBUG",
+    "duration": 1
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.854Z",
+    "type": "DATA_CURATION",
+    "message": "Found 3 relevant datasets",
+    "data": {
+      "hypothesis_preview": "Combining senolytics with NAD+ precursors synergis",
+      "field": "longevity and aging research",
+      "datasets": [
+        "Human Aging Longitudinal Study",
+        "Metabolic Aging Markers",
+        "Longevity Gene Association Study"
+      ]
+    },
+    "agent": "DataCuratorAgent",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.855Z",
+    "type": "INFO",
+    "message": "ACP Job completed: job_1760712945852_2",
+    "data": {
+      "datasets_found": 3
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.855Z",
+    "type": "INFO",
+    "message": "✓ Dataset curation complete: 3 datasets found",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.856Z",
+    "type": "INFO",
+    "message": "✅ Research workflow complete: Ready for on-chain proposal!",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.857Z",
+    "type": "INFO",
+    "message": "Peer review workflow recorded",
+    "data": {
+      "hypothesis_id": "hyp_001",
+      "approved": true,
+      "datasets_found": 3,
+      "ready_for_proposal": true
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.857Z",
+    "type": "INFO",
+    "message": "✅ Hypothesis ready for on-chain proposal!",
+    "data": {
+      "hypothesis_id": "hyp_001",
+      "overall_score": 7.5,
+      "datasets_found": 3
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.858Z",
+    "type": "INFO",
+    "message": "\n📊 PEER REVIEW RESULTS:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.858Z",
+    "type": "INFO",
+    "message": "  Overall Score: 7.5/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.859Z",
+    "type": "INFO",
+    "message": "  Novelty: 7/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.859Z",
+    "type": "INFO",
+    "message": "  Feasibility: 8/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.859Z",
+    "type": "INFO",
+    "message": "  Impact: 8/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.860Z",
+    "type": "INFO",
+    "message": "  Rigor: 7/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.861Z",
+    "type": "INFO",
+    "message": "  Approved: ✅ YES",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.861Z",
+    "type": "INFO",
+    "message": "  Reviewer Confidence: 8/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.861Z",
+    "type": "INFO",
+    "message": "\n💪 Strengths:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.862Z",
+    "type": "INFO",
+    "message": "  1. The hypothesis is innovative and seeks to combine two promising areas of aging research: senolytics and NAD+ precursors.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.862Z",
+    "type": "INFO",
+    "message": "  2. The proposed methodology is well-structured and includes a control group for comparison.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.863Z",
+    "type": "INFO",
+    "message": "  3. The study has the potential to significantly advance the field of aging research if the combination therapy proves effective.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.863Z",
+    "type": "INFO",
+    "message": "\n⚠️  Weaknesses:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.864Z",
+    "type": "INFO",
+    "message": "  1. The study does not account for potential confounding factors such as lifestyle, diet, and genetic predispositions that could affect cellular aging markers.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.864Z",
+    "type": "INFO",
+    "message": "  2. The short duration of the study (12 weeks) may not be enough to observe significant changes in the markers of cellular aging.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.865Z",
+    "type": "INFO",
+    "message": "  3. The study does not specify the types of senolytics and NAD+ precursors to be used, which could affect the results.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.865Z",
+    "type": "INFO",
+    "message": "\n💡 Recommendations:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.866Z",
+    "type": "INFO",
+    "message": "  1. Consider extending the duration of the study or implementing follow-up measurements to detect long-term effects.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.866Z",
+    "type": "INFO",
+    "message": "  2. Include a detailed plan for controlling confounding factors in the study design.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.866Z",
+    "type": "INFO",
+    "message": "  3. Specify the types and dosages of senolytics and NAD+ precursors to be used.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.867Z",
+    "type": "INFO",
+    "message": "\n📚 DATASETS FOUND:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.867Z",
+    "type": "INFO",
+    "message": "\n  1. Human Aging Longitudinal Study",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.868Z",
+    "type": "INFO",
+    "message": "     Source: UCSD Aging Center",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.869Z",
+    "type": "INFO",
+    "message": "     URL: https://example.com/aging-data",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.869Z",
+    "type": "INFO",
+    "message": "     Size: 2.5 GB",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.869Z",
+    "type": "INFO",
+    "message": "     Format: CSV, JSON",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.870Z",
+    "type": "INFO",
+    "message": "     Relevance: 6/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.870Z",
+    "type": "INFO",
+    "message": "     Access: public",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.871Z",
+    "type": "INFO",
+    "message": "\n  2. Metabolic Aging Markers",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.871Z",
+    "type": "INFO",
+    "message": "     Source: Metabolomics Workbench",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.872Z",
+    "type": "INFO",
+    "message": "     URL: https://example.com/metabolic-aging",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.872Z",
+    "type": "INFO",
+    "message": "     Size: 450 MB",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.873Z",
+    "type": "INFO",
+    "message": "     Format: mzML, CSV",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.873Z",
+    "type": "INFO",
+    "message": "     Relevance: 6/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.874Z",
+    "type": "INFO",
+    "message": "     Access: public",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.874Z",
+    "type": "INFO",
+    "message": "\n  3. Longevity Gene Association Study",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.874Z",
+    "type": "INFO",
+    "message": "     Source: NIH GenBank",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.875Z",
+    "type": "INFO",
+    "message": "     URL: https://example.com/longevity-gwas",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.876Z",
+    "type": "INFO",
+    "message": "     Size: 1.2 GB",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.876Z",
+    "type": "INFO",
+    "message": "     Format: VCF, PLINK",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.876Z",
+    "type": "INFO",
+    "message": "     Relevance: 4/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.877Z",
+    "type": "INFO",
+    "message": "     Access: public",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.877Z",
+    "type": "INFO",
+    "message": "\n🎯 FINAL STATUS:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.878Z",
+    "type": "INFO",
+    "message": "  Ready for Proposal: ✅ YES",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:45.878Z",
+    "type": "INFO",
+    "message": "\n  🚀 This hypothesis can proceed to on-chain proposal creation!",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:47.881Z",
+    "type": "INFO",
+    "message": "\n================================================================================",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:47.882Z",
+    "type": "INFO",
+    "message": "Testing Hypothesis: hyp_002",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:47.882Z",
+    "type": "INFO",
+    "message": "================================================================================\n",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:47.882Z",
+    "type": "INFO",
+    "message": "📝 Hypothesis:",
+    "data": {
+      "hypothesis": "Daily meditation practice of 30 minutes increases hippocampal volume in adults over 60..."
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:47.883Z",
+    "type": "INFO",
+    "message": "🚀 Initiating multi-agent research workflow",
+    "data": {
+      "hypothesis_id": "hyp_002",
+      "field": "neuroscience and cognitive aging"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:47.883Z",
+    "type": "INFO",
+    "message": "🔄 Starting multi-agent research workflow",
+    "data": {
+      "hypothesis_id": "hyp_002",
+      "field": "neuroscience and cognitive aging"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:47.884Z",
+    "type": "INFO",
+    "message": "Step 1: Requesting peer review...",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:47.884Z",
+    "type": "INFO",
+    "message": "ACP Job created: job_1760712947884_3 (Peer Review)",
+    "data": {
+      "requestor": "research_agent",
+      "provider": "peer_reviewer"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:55:47.885Z",
+    "type": "INFO",
+    "message": "Reviewing hypothesis: hyp_002",
+    "data": {
+      "field": "neuroscience and cognitive aging",
+      "hypothesis_preview": "Daily meditation practice of 30 minutes increases hippocampal volume in adults over 60"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.200Z",
+    "type": "API_CALL",
+    "message": "API call to OpenAI: SUCCESS (12315ms)",
+    "data": {
+      "endpoint": "OpenAI",
+      "duration": 12315,
+      "success": true
+    },
+    "level": "DEBUG",
+    "duration": 12315
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.201Z",
+    "type": "PERFORMANCE",
+    "message": "Operation 'review_hypothesis' completed in 12315ms",
+    "data": {
+      "operation": "review_hypothesis",
+      "duration": 12315,
+      "success": true,
+      "metadata": {
+        "overall_score": 8,
+        "approved": true
+      }
+    },
+    "level": "DEBUG",
+    "duration": 12315
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.201Z",
+    "type": "PEER_REVIEW",
+    "message": "Peer review completed for hyp_002",
+    "data": {
+      "hypothesis_id": "hyp_002",
+      "overall_score": 8,
+      "approved": true,
+      "novelty": 7,
+      "feasibility": 9
+    },
+    "agent": "PeerReviewAgent",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.202Z",
+    "type": "INFO",
+    "message": "ACP Job completed: job_1760712947884_3",
+    "data": {
+      "overall_score": 8,
+      "approved": true
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.203Z",
+    "type": "INFO",
+    "message": "✓ Peer review complete: APPROVED",
+    "data": {
+      "overall_score": 8,
+      "novelty": 7,
+      "feasibility": 9,
+      "impact": 8
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.204Z",
+    "type": "INFO",
+    "message": "Step 2: Requesting dataset curation...",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.204Z",
+    "type": "INFO",
+    "message": "ACP Job created: job_1760712960204_4 (Data Curation)",
+    "data": {
+      "requestor": "research_agent",
+      "provider": "data_curator"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.205Z",
+    "type": "INFO",
+    "message": "Searching for datasets",
+    "data": {
+      "hypothesis": "Daily meditation practice of 30 minutes increases hippocampal volume in adults over 60",
+      "field": "neuroscience and cognitive aging",
+      "max_results": 3
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.205Z",
+    "type": "PERFORMANCE",
+    "message": "Operation 'find_datasets' completed in 0ms",
+    "data": {
+      "operation": "find_datasets",
+      "duration": 0,
+      "success": true,
+      "metadata": {
+        "datasets_found": 2,
+        "field": "neuroscience and cognitive aging"
+      }
+    },
+    "level": "DEBUG",
+    "duration": 0
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.206Z",
+    "type": "DATA_CURATION",
+    "message": "Found 2 relevant datasets",
+    "data": {
+      "hypothesis_preview": "Daily meditation practice of 30 minutes increases ",
+      "field": "neuroscience and cognitive aging",
+      "datasets": [
+        "Human Aging Longitudinal Study",
+        "Metabolic Aging Markers"
+      ]
+    },
+    "agent": "DataCuratorAgent",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.207Z",
+    "type": "INFO",
+    "message": "ACP Job completed: job_1760712960204_4",
+    "data": {
+      "datasets_found": 2
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.208Z",
+    "type": "INFO",
+    "message": "✓ Dataset curation complete: 2 datasets found",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.208Z",
+    "type": "INFO",
+    "message": "✅ Research workflow complete: Ready for on-chain proposal!",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.209Z",
+    "type": "INFO",
+    "message": "Peer review workflow recorded",
+    "data": {
+      "hypothesis_id": "hyp_002",
+      "approved": true,
+      "datasets_found": 2,
+      "ready_for_proposal": true
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.209Z",
+    "type": "INFO",
+    "message": "✅ Hypothesis ready for on-chain proposal!",
+    "data": {
+      "hypothesis_id": "hyp_002",
+      "overall_score": 8,
+      "datasets_found": 2
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.210Z",
+    "type": "INFO",
+    "message": "\n📊 PEER REVIEW RESULTS:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.211Z",
+    "type": "INFO",
+    "message": "  Overall Score: 8/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.212Z",
+    "type": "INFO",
+    "message": "  Novelty: 7/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.213Z",
+    "type": "INFO",
+    "message": "  Feasibility: 9/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.213Z",
+    "type": "INFO",
+    "message": "  Impact: 8/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.223Z",
+    "type": "INFO",
+    "message": "  Rigor: 8/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.224Z",
+    "type": "INFO",
+    "message": "  Approved: ✅ YES",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.225Z",
+    "type": "INFO",
+    "message": "  Reviewer Confidence: 9/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.226Z",
+    "type": "INFO",
+    "message": "\n💪 Strengths:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.227Z",
+    "type": "INFO",
+    "message": "  1. The hypothesis focuses on a non-invasive, easy-to-implement intervention (meditation) that can be beneficial for a large population.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.228Z",
+    "type": "INFO",
+    "message": "  2. The use of MRI imaging to measure hippocampal volume is a reliable method.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.229Z",
+    "type": "INFO",
+    "message": "  3. The inclusion of a control group strengthens the study design.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.230Z",
+    "type": "INFO",
+    "message": "\n⚠️  Weaknesses:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.230Z",
+    "type": "INFO",
+    "message": "  1. The study does not consider the potential impact of other lifestyle factors that might affect hippocampal volume.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.231Z",
+    "type": "INFO",
+    "message": "  2. The study does not specify the type of meditation to be practiced, which could affect the results.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.232Z",
+    "type": "INFO",
+    "message": "  3. The study does not account for individual variations in meditation experience and capacity.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.233Z",
+    "type": "INFO",
+    "message": "\n💡 Recommendations:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.233Z",
+    "type": "INFO",
+    "message": "  1. Consider adjusting the study design to account for other potential influencing factors on hippocampal volume such as diet, exercise, and sleep.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.234Z",
+    "type": "INFO",
+    "message": "  2. Specify the type of meditation to be practiced and consider the potential impact of different meditation types on the results.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.235Z",
+    "type": "INFO",
+    "message": "  3. Consider including a pre-study assessment of meditation experience and capacity to better understand the individual variations.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.236Z",
+    "type": "INFO",
+    "message": "\n📚 DATASETS FOUND:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.236Z",
+    "type": "INFO",
+    "message": "\n  1. Human Aging Longitudinal Study",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.237Z",
+    "type": "INFO",
+    "message": "     Source: UCSD Aging Center",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.238Z",
+    "type": "INFO",
+    "message": "     URL: https://example.com/aging-data",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.238Z",
+    "type": "INFO",
+    "message": "     Size: 2.5 GB",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.239Z",
+    "type": "INFO",
+    "message": "     Format: CSV, JSON",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.240Z",
+    "type": "INFO",
+    "message": "     Relevance: 4/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.241Z",
+    "type": "INFO",
+    "message": "     Access: public",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.241Z",
+    "type": "INFO",
+    "message": "\n  2. Metabolic Aging Markers",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.242Z",
+    "type": "INFO",
+    "message": "     Source: Metabolomics Workbench",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.243Z",
+    "type": "INFO",
+    "message": "     URL: https://example.com/metabolic-aging",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.244Z",
+    "type": "INFO",
+    "message": "     Size: 450 MB",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.244Z",
+    "type": "INFO",
+    "message": "     Format: mzML, CSV",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.245Z",
+    "type": "INFO",
+    "message": "     Relevance: 2/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.245Z",
+    "type": "INFO",
+    "message": "     Access: public",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.247Z",
+    "type": "INFO",
+    "message": "\n🎯 FINAL STATUS:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.247Z",
+    "type": "INFO",
+    "message": "  Ready for Proposal: ✅ YES",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:00.248Z",
+    "type": "INFO",
+    "message": "\n  🚀 This hypothesis can proceed to on-chain proposal creation!",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:02.250Z",
+    "type": "INFO",
+    "message": "\n================================================================================",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:02.251Z",
+    "type": "INFO",
+    "message": "Testing Hypothesis: hyp_003",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:02.252Z",
+    "type": "INFO",
+    "message": "================================================================================\n",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:02.253Z",
+    "type": "INFO",
+    "message": "📝 Hypothesis:",
+    "data": {
+      "hypothesis": "Eating chocolate every day cures all diseases..."
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:02.254Z",
+    "type": "INFO",
+    "message": "🚀 Initiating multi-agent research workflow",
+    "data": {
+      "hypothesis_id": "hyp_003",
+      "field": "nutrition"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:02.255Z",
+    "type": "INFO",
+    "message": "🔄 Starting multi-agent research workflow",
+    "data": {
+      "hypothesis_id": "hyp_003",
+      "field": "nutrition"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:02.256Z",
+    "type": "INFO",
+    "message": "Step 1: Requesting peer review...",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:02.258Z",
+    "type": "INFO",
+    "message": "ACP Job created: job_1760712962258_5 (Peer Review)",
+    "data": {
+      "requestor": "research_agent",
+      "provider": "peer_reviewer"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:02.259Z",
+    "type": "INFO",
+    "message": "Reviewing hypothesis: hyp_003",
+    "data": {
+      "field": "nutrition",
+      "hypothesis_preview": "Eating chocolate every day cures all diseases"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.796Z",
+    "type": "API_CALL",
+    "message": "API call to OpenAI: SUCCESS (13537ms)",
+    "data": {
+      "endpoint": "OpenAI",
+      "duration": 13537,
+      "success": true
+    },
+    "level": "DEBUG",
+    "duration": 13537
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.797Z",
+    "type": "PERFORMANCE",
+    "message": "Operation 'review_hypothesis' completed in 13537ms",
+    "data": {
+      "operation": "review_hypothesis",
+      "duration": 13537,
+      "success": true,
+      "metadata": {
+        "overall_score": 3.5,
+        "approved": false
+      }
+    },
+    "level": "DEBUG",
+    "duration": 13537
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.800Z",
+    "type": "PEER_REVIEW",
+    "message": "Peer review completed for hyp_003",
+    "data": {
+      "hypothesis_id": "hyp_003",
+      "overall_score": 3.5,
+      "approved": false,
+      "novelty": 2,
+      "feasibility": 1
+    },
+    "agent": "PeerReviewAgent",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.802Z",
+    "type": "INFO",
+    "message": "ACP Job completed: job_1760712962258_5",
+    "data": {
+      "overall_score": 3.5,
+      "approved": false
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.803Z",
+    "type": "INFO",
+    "message": "✓ Peer review complete: NEEDS IMPROVEMENT",
+    "data": {
+      "overall_score": 3.5,
+      "novelty": 2,
+      "feasibility": 1,
+      "impact": 10
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.804Z",
+    "type": "INFO",
+    "message": "⚠️  Hypothesis not approved, skipping dataset curation",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.806Z",
+    "type": "INFO",
+    "message": "Recommendations for improvement:",
+    "data": {
+      "weaknesses": [
+        "The hypothesis is overly broad and lacks specificity",
+        "The methodology is poorly designed, with no control group or clear parameters for measuring 'getting better'",
+        "The claim that chocolate can cure 'all diseases' is unsupported by existing scientific literature and highly unlikely to be true"
+      ],
+      "recommendations": [
+        "Narrow down the scope of the hypothesis to focus on a specific disease or group of diseases",
+        "Design a more rigorous methodology that includes a control group and clear, measurable outcomes",
+        "Conduct a literature review to identify any existing research on the health benefits of chocolate and use this to inform your hypothesis and methodology"
+      ]
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.807Z",
+    "type": "INFO",
+    "message": "⏸️  Research workflow complete: Not ready for proposal yet",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.808Z",
+    "type": "INFO",
+    "message": "Peer review workflow recorded",
+    "data": {
+      "hypothesis_id": "hyp_003",
+      "approved": false,
+      "datasets_found": 0,
+      "ready_for_proposal": false
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.809Z",
+    "type": "INFO",
+    "message": "❌ Hypothesis needs improvement",
+    "data": {
+      "hypothesis_id": "hyp_003",
+      "weaknesses": [
+        "The hypothesis is overly broad and lacks specificity",
+        "The methodology is poorly designed, with no control group or clear parameters for measuring 'getting better'",
+        "The claim that chocolate can cure 'all diseases' is unsupported by existing scientific literature and highly unlikely to be true"
+      ]
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.811Z",
+    "type": "INFO",
+    "message": "\n📊 PEER REVIEW RESULTS:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.812Z",
+    "type": "INFO",
+    "message": "  Overall Score: 3.5/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.813Z",
+    "type": "INFO",
+    "message": "  Novelty: 2/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.814Z",
+    "type": "INFO",
+    "message": "  Feasibility: 1/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.815Z",
+    "type": "INFO",
+    "message": "  Impact: 10/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.816Z",
+    "type": "INFO",
+    "message": "  Rigor: 1/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.816Z",
+    "type": "INFO",
+    "message": "  Approved: ❌ NO",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.817Z",
+    "type": "INFO",
+    "message": "  Reviewer Confidence: 1/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.818Z",
+    "type": "INFO",
+    "message": "\n💪 Strengths:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.819Z",
+    "type": "INFO",
+    "message": "  1. The hypothesis is simple and straightforward",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.820Z",
+    "type": "INFO",
+    "message": "  2. If proven true, it could have a significant impact on human health",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.821Z",
+    "type": "INFO",
+    "message": "\n⚠️  Weaknesses:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.822Z",
+    "type": "INFO",
+    "message": "  1. The hypothesis is overly broad and lacks specificity",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.822Z",
+    "type": "INFO",
+    "message": "  2. The methodology is poorly designed, with no control group or clear parameters for measuring 'getting better'",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.823Z",
+    "type": "INFO",
+    "message": "  3. The claim that chocolate can cure 'all diseases' is unsupported by existing scientific literature and highly unlikely to be true",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.824Z",
+    "type": "INFO",
+    "message": "\n💡 Recommendations:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.825Z",
+    "type": "INFO",
+    "message": "  1. Narrow down the scope of the hypothesis to focus on a specific disease or group of diseases",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.825Z",
+    "type": "INFO",
+    "message": "  2. Design a more rigorous methodology that includes a control group and clear, measurable outcomes",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.826Z",
+    "type": "INFO",
+    "message": "  3. Conduct a literature review to identify any existing research on the health benefits of chocolate and use this to inform your hypothesis and methodology",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.827Z",
+    "type": "INFO",
+    "message": "\n🎯 FINAL STATUS:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.828Z",
+    "type": "INFO",
+    "message": "  Ready for Proposal: ❌ NO",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:15.828Z",
+    "type": "INFO",
+    "message": "\n  ❌ Hypothesis needs improvement based on peer review feedback.",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.830Z",
+    "type": "INFO",
+    "message": "\n\n================================================================================",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.831Z",
+    "type": "INFO",
+    "message": "🤖 AGENT STATES SUMMARY",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.833Z",
+    "type": "INFO",
+    "message": "================================================================================\n",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.833Z",
+    "type": "INFO",
+    "message": "👨‍🔬 Peer Review Agent:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.834Z",
+    "type": "INFO",
+    "message": "  Reviews Completed: 3",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.835Z",
+    "type": "INFO",
+    "message": "  Average Score: 6.33/10",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.836Z",
+    "type": "INFO",
+    "message": "  Approved: 2",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.837Z",
+    "type": "INFO",
+    "message": "  Rejected: 1",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.838Z",
+    "type": "INFO",
+    "message": "  Status: active",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.839Z",
+    "type": "INFO",
+    "message": "\n📚 Data Curator Agent:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.840Z",
+    "type": "INFO",
+    "message": "  Searches Performed: 2",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.841Z",
+    "type": "INFO",
+    "message": "  Datasets Found: 5",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.842Z",
+    "type": "INFO",
+    "message": "  Data Sources: Kaggle, UCI ML, PubMed Central, data.gov",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.842Z",
+    "type": "INFO",
+    "message": "  Status: idle",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.844Z",
+    "type": "INFO",
+    "message": "\n\n================================================================================",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.845Z",
+    "type": "INFO",
+    "message": "📋 ACP JOBS SUMMARY",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.846Z",
+    "type": "INFO",
+    "message": "================================================================================\n",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.847Z",
+    "type": "INFO",
+    "message": "Total Jobs Created: 5",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.848Z",
+    "type": "INFO",
+    "message": "✅ Completed: 5",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.848Z",
+    "type": "INFO",
+    "message": "❌ Failed: 0",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.849Z",
+    "type": "INFO",
+    "message": "\n📊 Job Details:",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.851Z",
+    "type": "INFO",
+    "message": "\n  Job ID: job_1760712932421_1",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.852Z",
+    "type": "INFO",
+    "message": "  Task: review_hypothesis",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.853Z",
+    "type": "INFO",
+    "message": "  Provider: peer_reviewer",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.854Z",
+    "type": "INFO",
+    "message": "  Status: completed",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.854Z",
+    "type": "INFO",
+    "message": "  Payment: 5 VIRTUAL",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.856Z",
+    "type": "INFO",
+    "message": "  Created: 10/17/2025, 5:55:32 PM",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.857Z",
+    "type": "INFO",
+    "message": "  Completed: 10/17/2025, 5:55:45 PM",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.858Z",
+    "type": "INFO",
+    "message": "\n  Job ID: job_1760712945852_2",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.859Z",
+    "type": "INFO",
+    "message": "  Task: find_datasets",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.860Z",
+    "type": "INFO",
+    "message": "  Provider: data_curator",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.861Z",
+    "type": "INFO",
+    "message": "  Status: completed",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.862Z",
+    "type": "INFO",
+    "message": "  Payment: 10 VIRTUAL",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.863Z",
+    "type": "INFO",
+    "message": "  Created: 10/17/2025, 5:55:45 PM",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.863Z",
+    "type": "INFO",
+    "message": "  Completed: 10/17/2025, 5:55:45 PM",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.864Z",
+    "type": "INFO",
+    "message": "\n  Job ID: job_1760712947884_3",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.865Z",
+    "type": "INFO",
+    "message": "  Task: review_hypothesis",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.865Z",
+    "type": "INFO",
+    "message": "  Provider: peer_reviewer",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.866Z",
+    "type": "INFO",
+    "message": "  Status: completed",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.867Z",
+    "type": "INFO",
+    "message": "  Payment: 5 VIRTUAL",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.868Z",
+    "type": "INFO",
+    "message": "  Created: 10/17/2025, 5:55:47 PM",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.868Z",
+    "type": "INFO",
+    "message": "  Completed: 10/17/2025, 5:56:00 PM",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.869Z",
+    "type": "INFO",
+    "message": "\n  Job ID: job_1760712960204_4",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.870Z",
+    "type": "INFO",
+    "message": "  Task: find_datasets",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.871Z",
+    "type": "INFO",
+    "message": "  Provider: data_curator",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.871Z",
+    "type": "INFO",
+    "message": "  Status: completed",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.872Z",
+    "type": "INFO",
+    "message": "  Payment: 10 VIRTUAL",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.872Z",
+    "type": "INFO",
+    "message": "  Created: 10/17/2025, 5:56:00 PM",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.873Z",
+    "type": "INFO",
+    "message": "  Completed: 10/17/2025, 5:56:00 PM",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.873Z",
+    "type": "INFO",
+    "message": "\n  Job ID: job_1760712962258_5",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.874Z",
+    "type": "INFO",
+    "message": "  Task: review_hypothesis",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.875Z",
+    "type": "INFO",
+    "message": "  Provider: peer_reviewer",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.876Z",
+    "type": "INFO",
+    "message": "  Status: completed",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.877Z",
+    "type": "INFO",
+    "message": "  Payment: 5 VIRTUAL",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.878Z",
+    "type": "INFO",
+    "message": "  Created: 10/17/2025, 5:56:02 PM",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.878Z",
+    "type": "INFO",
+    "message": "  Completed: 10/17/2025, 5:56:15 PM",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.879Z",
+    "type": "INFO",
+    "message": "\n\n✅ All tests completed successfully!",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-17T14:56:17.880Z",
+    "type": "INFO",
+    "message": "\n🎉 Test suite finished!",
+    "level": "INFO"
   }
 ]
