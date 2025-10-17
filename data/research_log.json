@@ -1,0 +1,135 @@
+[
+  {
+    "timestamp": "2025-10-16T19:18:37.831Z",
+    "type": "INFO",
+    "message": "Starting paper fetch for topic: longevity",
+    "data": {
+      "topic": "longevity",
+      "maxResults": 5
+    }
+  },
+  {
+    "timestamp": "2025-10-16T19:18:37.879Z",
+    "type": "INFO",
+    "message": "Requesting arXiv API: http://export.arxiv.org/api/query?search_query=all:longevity&start=0&max_results=5&sortBy=submittedDate&sortOrder=descending"
+  },
+  {
+    "timestamp": "2025-10-16T19:18:38.424Z",
+    "type": "PAPER_FETCH",
+    "message": "Fetched 5 papers on topic: longevity",
+    "data": {
+      "topic": "longevity",
+      "count": 5
+    }
+  },
+  {
+    "timestamp": "2025-10-16T19:18:41.434Z",
+    "type": "INFO",
+    "message": "Starting paper fetch for topic: aging",
+    "data": {
+      "topic": "aging",
+      "maxResults": 3
+    }
+  },
+  {
+    "timestamp": "2025-10-16T19:18:41.437Z",
+    "type": "INFO",
+    "message": "Requesting arXiv API: http://export.arxiv.org/api/query?search_query=all:aging&start=0&max_results=3&sortBy=submittedDate&sortOrder=descending"
+  },
+  {
+    "timestamp": "2025-10-16T19:18:41.858Z",
+    "type": "PAPER_FETCH",
+    "message": "Fetched 3 papers on topic: aging",
+    "data": {
+      "topic": "aging",
+      "count": 3
+    }
+  },
+  {
+    "timestamp": "2025-10-16T19:18:44.860Z",
+    "type": "INFO",
+    "message": "Starting paper fetch for topic: senescence",
+    "data": {
+      "topic": "senescence",
+      "maxResults": 3
+    }
+  },
+  {
+    "timestamp": "2025-10-16T19:18:44.860Z",
+    "type": "INFO",
+    "message": "Requesting arXiv API: http://export.arxiv.org/api/query?search_query=all:senescence&start=0&max_results=3&sortBy=submittedDate&sortOrder=descending"
+  },
+  {
+    "timestamp": "2025-10-16T19:18:45.298Z",
+    "type": "PAPER_FETCH",
+    "message": "Fetched 3 papers on topic: senescence",
+    "data": {
+      "topic": "senescence",
+      "count": 3
+    }
+  },
+  {
+    "timestamp": "2025-10-17T11:01:28.864Z",
+    "type": "INFO",
+    "message": "Starting hypothesis generation for field: longevity"
+  },
+  {
+    "timestamp": "2025-10-17T11:01:28.899Z",
+    "type": "INFO",
+    "message": "Calling OpenAI API for hypothesis generation"
+  },
+  {
+    "timestamp": "2025-10-17T11:01:52.668Z",
+    "type": "INFO",
+    "message": "Received hypotheses from OpenAI"
+  },
+  {
+    "timestamp": "2025-10-17T11:01:52.671Z",
+    "type": "HYPOTHESIS_GENERATION",
+    "message": "Generated hypothesis",
+    "data": {
+      "hypothesis": "Generated 3 hypotheses for longevity",
+      "scores": {
+        "count": 3,
+        "field": "longevity",
+        "scores": [
+          8,
+          8,
+          7.75
+        ]
+      }
+    }
+  },
+  {
+    "timestamp": "2025-10-17T11:01:55.707Z",
+    "type": "INFO",
+    "message": "Starting hypothesis generation for field: aging"
+  },
+  {
+    "timestamp": "2025-10-17T11:01:55.708Z",
+    "type": "INFO",
+    "message": "Calling OpenAI API for hypothesis generation"
+  },
+  {
+    "timestamp": "2025-10-17T11:02:32.587Z",
+    "type": "INFO",
+    "message": "Received hypotheses from OpenAI"
+  },
+  {
+    "timestamp": "2025-10-17T11:02:32.592Z",
+    "type": "HYPOTHESIS_GENERATION",
+    "message": "Generated hypothesis",
+    "data": {
+      "hypothesis": "Generated 3 hypotheses for aging",
+      "scores": {
+        "count": 3,
+        "field": "aging",
+        "scores": [
+          8,
+          8,
+          9
+        ]
+      }
+    }
+  }
+]
