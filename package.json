@@ -17,7 +17,10 @@
     "test:pipeline": "ts-node tests/testFullPipeline.ts",
     "test:longrunning": "ts-node tests/testLongRunning.ts",
     "test:all": "npm run test:fetch && npm run test:analyze && npm run test:hypothesis && npm run test:agent",
-    "clean": "rm -rf dist"
+    "compile:contracts": "npx hardhat compile",
+    "deploy:baseSepolia": "npx hardhat run scripts/deploy.ts --network baseSepolia",
+    "verify:baseSepolia": "npx hardhat run scripts/verify.ts --network baseSepolia",
+    "clean": "rm -rf dist artifacts cache"
   },
   "keywords": ["ai", "research", "desci", "virtuals", "blockchain"],
   "author": "ScienceDAO Team",
@@ -32,7 +35,9 @@
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
     "@types/node": "^24.8.0",
+    "hardhat": "^2.19.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
