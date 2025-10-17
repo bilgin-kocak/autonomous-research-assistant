@@ -41,13 +41,24 @@ async function main() {
   const ResearchToken = await hre.ethers.getContractFactory("ResearchToken");
   const researchToken = await ResearchToken.deploy();
 
+  console.log("Waiting for deployment...");
   await researchToken.waitForDeployment();
   const contractAddress = await researchToken.getAddress();
 
   console.log("✅ ResearchToken deployed to:", contractAddress);
   console.log();
 
+  // Wait for block confirmations to ensure the contract code is available
+  console.log("Waiting for block confirmations...");
+  const deploymentTx = researchToken.deploymentTransaction();
+  if (deploymentTx) {
+    const receipt = await deploymentTx.wait(3); // Wait for 3 confirmations
+    console.log(`Confirmed in block ${receipt?.blockNumber}`);
+  }
+  console.log();
+
   // Get contract details
+  console.log("Fetching contract details...");
   const name = await researchToken.name();
   const symbol = await researchToken.symbol();
   const decimals = await researchToken.decimals();

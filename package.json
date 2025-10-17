@@ -22,10 +22,17 @@
     "verify:baseSepolia": "npx hardhat run scripts/verify.ts --network baseSepolia",
     "clean": "rm -rf dist artifacts cache"
   },
-  "keywords": ["ai", "research", "desci", "virtuals", "blockchain"],
+  "keywords": [
+    "ai",
+    "research",
+    "desci",
+    "virtuals",
+    "blockchain"
+  ],
   "author": "ScienceDAO Team",
   "license": "MIT",
   "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
     "@types/xml2js": "^0.4.14",
     "@virtuals-protocol/game": "^0.1.14",
     "axios": "^1.12.2",
