@@ -1,0 +1,11 @@
+{
+  "address": "0x1221aBCe7D8FB1ba4cF9293E94539cb45e7857fE",
+  "name": "ScienceDAO Token",
+  "symbol": "SCIDAO",
+  "decimals": 18,
+  "totalSupply": "1000000.0",
+  "owner": "0x48D185bc646534597E25199dd4d73692ebD98BAc",
+  "network": "baseSepolia",
+  "deployedAt": "2025-10-17T14:22:21.210Z",
+  "deployer": "0x48D185bc646534597E25199dd4d73692ebD98BAc"
+}
