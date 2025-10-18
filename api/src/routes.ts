@@ -172,16 +172,30 @@ router.get('/proposals', (req: Request, res: Response) => {
         const durationDays = data.duration || 30;
         const deadline = new Date(createdAt.getTime() + durationDays * 24 * 60 * 60 * 1000);
 
+        // Parse funding goal (remove "ETH" suffix if present and convert to number)
+        const fundingGoalStr = (data.fundingGoal || '0.1').toString().replace(/\s*ETH\s*/i, '');
+        const fundingGoal = parseFloat(fundingGoalStr) || 0.1;
+
+        // Create title from hypothesis (first 80 chars)
+        const title = data.hypothesis
+          ? data.hypothesis.substring(0, 80) + (data.hypothesis.length > 80 ? '...' : '')
+          : `Research Proposal ${data.proposalId}`;
+
+        // Create full description from hypothesis and methodology
+        const description = data.hypothesis || data.methodology || 'On-chain research funding proposal';
+
         const proposal: Proposal = {
-          id: parseInt(data.proposalId) || 0,
+          id: data.proposalId?.toString() || '0',
           hypothesis_id: data.hypothesis_id,
-          hypothesis_preview: data.hypothesis?.substring(0, 100) || `Research proposal ${data.proposalId}`,
-          funding_goal: data.fundingGoal || '0.1',
-          current_funding: '0',
+          title: title,
+          description: description,
+          funding_goal: fundingGoal,
+          current_funding: 0,
           deadline: deadline.toISOString(),
           created_at: proposalLog.timestamp,
           status: 'active',
           tx_hash: data.txHash,
+          on_chain_address: data.txHash,
         };
         proposals.push(proposal);
       }

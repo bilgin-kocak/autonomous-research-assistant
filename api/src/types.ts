@@ -43,15 +43,17 @@ export interface Paper {
 }
 
 export interface Proposal {
-  id: number;
+  id: string;
   hypothesis_id: string;
-  hypothesis_preview: string;
-  funding_goal: string;
-  current_funding: string;
+  title: string;
+  description: string;
+  funding_goal: number;
+  current_funding: number;
   deadline: string;
   tx_hash?: string;
+  on_chain_address?: string;
   created_at: string;
-  status: 'active' | 'funded' | 'completed';
+  status: 'active' | 'funded' | 'completed' | 'draft' | 'rejected';
 }
 
 export interface AgentStats {

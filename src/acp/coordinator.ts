@@ -271,7 +271,7 @@ export class ResearchCoordinator {
         peer_review: peerReview,
         datasets,
         approved: peerReview.approved,
-        ready_for_proposal: peerReview.approved && (datasets?.length || 0) > 0
+        ready_for_proposal: peerReview.approved  // Create proposal if approved, regardless of datasets
       };
 
       if (result.ready_for_proposal) {

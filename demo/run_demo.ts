@@ -282,7 +282,7 @@ async function main() {
     log(`   👨‍🔬 Peer review score: ${result.peer_review.overall_score.toFixed(1)}/10`, 'cyan');
     log(`   📚 Datasets found: ${result.datasets?.length || 0}`, 'cyan');
     log(`   ✅ Approved: ${result.approved ? 'YES' : 'NO'}`, result.approved ? 'green' : 'red');
-    log(`   💰 Proposal created: ${result.ready_for_proposal ? 'YES' : 'NO'}`, result.ready_for_proposal ? 'green' : 'red');
+    log(`   💰 Proposal created on-chain: ${result.ready_for_proposal ? 'YES' : 'NO'}`, result.ready_for_proposal ? 'green' : 'red');
     log('', 'reset');
 
     log('🌐 Next Steps:', 'bright');
