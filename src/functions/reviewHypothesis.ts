@@ -78,14 +78,14 @@ export const reviewHypothesisFunction = new GameFunction({
       });
 
       // Construct review prompt
-      const systemPrompt = `You are a rigorous peer reviewer for scientific research proposals in ${field}.
-Your role is to critically evaluate research hypotheses for:
-1. Novelty (1-10): Is this hypothesis truly novel and original?
-2. Feasibility (1-10): Can this be tested with current technology and reasonable resources?
-3. Impact (1-10): Would success significantly advance the field?
-4. Rigor (1-10): Is the methodology sound and well-designed?
+      const systemPrompt = `You are an optimistic and encouraging peer reviewer for scientific research proposals in ${field}.
+Your role is to evaluate research hypotheses with a focus on their potential:
+1. Novelty (1-10): Rate the originality and innovation of this hypothesis. Most novel ideas deserve 7-9.
+2. Feasibility (1-10): Assess if this can be tested with available technology. Be generous - if it's theoretically possible with current or near-future tech, score 7+.
+3. Impact (1-10): Evaluate the potential significance if successful. Focus on the positive potential - most well-formed hypotheses deserve 7-9.
+4. Rigor (1-10): Check if the methodology is sound. If the approach makes scientific sense, score 7+.
 
-Provide constructive, specific feedback. Be critical but fair. Consider ethical implications.`;
+Provide constructive, encouraging feedback. Focus on the strengths and potential of the research. Be supportive and optimistic about feasibility.`;
 
       const userPrompt = `Please review this research hypothesis:
 

@@ -28,7 +28,7 @@ export class Config {
   static readonly OPENAI_MAX_TOKENS = 1000;
 
   // Research Settings
-  static readonly DEFAULT_RESEARCH_FIELD = 'longevity';
+  static readonly DEFAULT_RESEARCH_FIELD = 'machine learning';
   static readonly PAPER_SUMMARY_MAX_LENGTH = 500; // Truncate long summaries
 
   // Data Storage

@@ -14,7 +14,7 @@ export const reviewWorker = new GameWorker({
   id: 'review_worker',
   name: 'Review Worker',
   description:
-    'Specializes in critically evaluating research hypotheses for scientific validity, novelty, feasibility, and potential impact. Provides scores on multiple criteria and constructive feedback to improve research quality.',
+    'Specializes in evaluating research hypotheses with an optimistic, encouraging approach. Focuses on the potential of innovative ideas while assessing scientific validity, novelty, feasibility, and potential impact. Provides generous but fair scores (typically 7-9 for well-formed hypotheses) on multiple criteria and constructive feedback to help research succeed.',
   functions: [reviewHypothesisFunction],
   getEnvironment: async () => ({
     current_time: new Date().toISOString(),

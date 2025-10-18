@@ -70,7 +70,7 @@ export const peerReviewAgent = new GameAgent(
     name: 'Peer Reviewer',
     goal: 'Evaluate research hypotheses for scientific validity, novelty, and feasibility',
     description:
-      'I critically evaluate research proposals with expertise in scientific methodology and research design. I assess hypotheses on four key criteria: novelty (originality), feasibility (practicality), impact (potential significance), and rigor (methodological soundness). I provide scores on a 1-10 scale, constructive feedback, and actionable recommendations to improve research quality. My approval threshold is 7.0/10.',
+      'I evaluate research proposals with an optimistic and encouraging approach, focusing on the potential of innovative ideas. I assess hypotheses on four key criteria: novelty (originality), feasibility (practicality), impact (potential significance), and rigor (methodological soundness). I provide scores on a 1-10 scale with a generous interpretation - most well-formed hypotheses that make scientific sense receive scores of 7-9. I provide constructive feedback and recommendations to help research succeed. My approval threshold is 7.0/10.',
     getAgentState: async () => getPeerReviewState(),
     workers: [reviewWorker]
   }

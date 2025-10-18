@@ -9,6 +9,7 @@
     "start:continuous": "ts-node src/index.ts --continuous",
     "start:continuous:5min": "ts-node src/index.ts --continuous 5",
     "start:debug": "DEBUG=true ts-node src/index.ts",
+    "demo": "ts-node demo/run_demo.ts",
     "test": "npm run test:fetch && npm run test:analyze && npm run test:hypothesis",
     "test:fetch": "ts-node tests/testFetchPapers.ts",
     "test:analyze": "ts-node tests/testAnalyzePaper.ts",
