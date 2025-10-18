@@ -18,6 +18,7 @@ import AgentStats from "./AgentStats";
 import HypothesisList from "./HypothesisList";
 import ActivityFeed from "./ActivityFeed";
 import PaperList from "./PaperList";
+import ProposalsList from "./ProposalsList";
 
 const Dashboard: React.FC = () => {
   const [data, setData] = useState<DashboardData | null>(null);
@@ -159,16 +160,10 @@ const Dashboard: React.FC = () => {
 
           {activeTab === "proposals" && (
             <div className="px-8 py-8">
-              <div className="bg-[#1A1F2E] border border-[#1E2738] rounded-lg p-12 text-center">
-                <div className="text-5xl mb-4">🚧</div>
-                <h3 className="text-xl font-display text-text-primary mb-2">
-                  Proposals View Coming Soon
-                </h3>
-                <p className="text-text-secondary">
-                  This section will display funding proposals and DAO
-                  governance.
-                </p>
-              </div>
+              <ProposalsList
+                proposals={data?.proposals || []}
+                loading={false}
+              />
             </div>
           )}
         </main>

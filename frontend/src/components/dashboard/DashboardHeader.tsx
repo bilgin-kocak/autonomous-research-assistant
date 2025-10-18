@@ -12,6 +12,7 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({ activeTab, setActiveT
     { id: 'hypotheses', label: 'Hypotheses' },
     { id: 'papers', label: 'Papers' },
     { id: 'agents', label: 'Agents' },
+    { id: 'proposals', label: 'Proposals' },
   ];
 
   const profileImages = [
