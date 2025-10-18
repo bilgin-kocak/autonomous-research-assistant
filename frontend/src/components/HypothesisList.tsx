@@ -51,14 +51,29 @@ const HypothesisList: React.FC<HypothesisListProps> = ({ hypotheses, loading }) 
     setExpandedId(expandedId === id ? null : id);
   };
 
+  /**
+   * handleCreateProposal - Creates an on-chain funding proposal for an approved hypothesis
+   *
+   * This function enables users to convert AI-approved hypotheses into blockchain-based
+   * funding proposals that the community can then fund. The workflow:
+   *
+   * 1. Authenticates user via Privy
+   * 2. Calls ResearchToken.sol createProposal() on Base Sepolia
+   * 3. Proposal stored on-chain with: hypothesisId, 0.1 ETH goal, 30 day duration
+   * 4. Returns proposalId that can be used for funding
+   * 5. Proposal appears in "Funding Proposals" tab
+   *
+   * @param hypothesis - The approved hypothesis to create a proposal for
+   * @returns Promise<void>
+   */
   const handleCreateProposal = async (hypothesis: Hypothesis) => {
-    // If not authenticated, prompt login
+    // Check authentication - trigger Privy login if not authenticated
     if (!ready || !authenticated) {
       login();
       return;
     }
 
-    // Get the first wallet (embedded or connected)
+    // Get user's wallet from Privy (embedded or external Web3 wallet)
     const wallet = wallets[0];
     if (!wallet) {
       alert('No wallet found. Please connect a wallet first.');
@@ -66,30 +81,36 @@ const HypothesisList: React.FC<HypothesisListProps> = ({ hypotheses, loading }) 
     }
 
     try {
+      // Set button to loading state
       setFundingState(prev => ({ ...prev, [hypothesis.id]: 'pending' }));
 
-      // Get the Ethereum provider from the wallet
+      // Get Ethereum provider from Privy wallet
       const ethereumProvider = await wallet.getEthereumProvider();
 
-      // Use ethers v6 BrowserProvider and Contract
+      // Dynamically import ethers.js to reduce bundle size
       const { BrowserProvider, Contract, parseEther: parseEtherEthers } = await import('ethers');
+
+      // Create ethers provider and get signer
       const provider = new BrowserProvider(ethereumProvider);
       const signer = await provider.getSigner();
 
-      // Contract address and ABI
+      // ResearchToken.sol contract on Base Sepolia
       const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS || '0x1221aBCe7D8FB1ba4cF9293E94539cb45e7857fE';
 
-      // Minimal ABI for createProposal function
+      // Minimal ABI - only the createProposal function
+      // This function creates a new funding proposal and returns the proposalId
       const contractABI = [
         'function createProposal(string memory hypothesisId, uint256 fundingGoal, uint256 duration) external returns (uint256)'
       ];
 
-      // Create contract instance
+      // Create contract instance connected to user's signer
       const contract = new Contract(contractAddress, contractABI, signer);
 
       // Proposal parameters
-      const fundingGoal = parseEtherEthers('0.1'); // 0.1 ETH funding goal
-      const duration = 30 * 24 * 60 * 60; // 30 days in seconds
+      // - fundingGoal: 0.1 ETH (100000000000000000 wei)
+      // - duration: 30 days in seconds (2592000 seconds)
+      const fundingGoal = parseEtherEthers('0.1');
+      const duration = 30 * 24 * 60 * 60; // 30 days
 
       console.log('Creating proposal on-chain...', {
         hypothesisId: hypothesis.id,
@@ -97,7 +118,8 @@ const HypothesisList: React.FC<HypothesisListProps> = ({ hypotheses, loading }) 
         duration: '30 days'
       });
 
-      // Call createProposal function
+      // Call smart contract function
+      // This creates a proposal on-chain that can be funded by the community
       const tx = await contract.createProposal(
         hypothesis.id,
         fundingGoal,
@@ -106,25 +128,33 @@ const HypothesisList: React.FC<HypothesisListProps> = ({ hypotheses, loading }) 
 
       console.log('Transaction sent:', tx.hash);
 
-      // Wait for transaction to be mined
+      // Wait for transaction to be mined on Base Sepolia
       const receipt = await tx.wait();
 
+      // Update button to success state
       setFundingState(prev => ({ ...prev, [hypothesis.id]: 'success' }));
+
+      // Store transaction hash for BaseScan link
       setTxHash(prev => ({ ...prev, [hypothesis.id]: tx.hash }));
 
-      console.log('Proposal created!', { txHash: tx.hash, blockNumber: receipt.blockNumber });
+      console.log('Proposal created!', {
+        txHash: tx.hash,
+        blockNumber: receipt.blockNumber
+      });
 
-      // Show success message
+      // Notify user - proposal now visible in Proposals tab
       alert(`✅ Proposal created successfully!\n\nView your proposal in the "Funding Proposals" tab.`);
     } catch (error) {
       console.error('Proposal creation error:', error);
+
+      // Update button to error state
       setFundingState(prev => ({ ...prev, [hypothesis.id]: 'error' }));
 
-      // Show user-friendly error
+      // Show user-friendly error message
       const errorMessage = error instanceof Error ? error.message : 'Transaction failed';
       alert(`Failed to create proposal: ${errorMessage}`);
 
-      // Reset error state after 3 seconds
+      // Auto-reset error state after 3 seconds
       setTimeout(() => {
         setFundingState(prev => ({ ...prev, [hypothesis.id]: 'idle' }));
       }, 3000);

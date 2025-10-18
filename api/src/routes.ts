@@ -37,32 +37,52 @@ function getContractConfig(): any {
   }
 }
 
-// GET /api/status - Agent statistics
+/**
+ * GET /api/status - Agent statistics and health
+ *
+ * Returns real-time statistics about agent activity by analyzing research_log.json.
+ * This endpoint powers the main dashboard statistics display.
+ *
+ * Response includes:
+ * - agent_status: Current operational status
+ * - uptime: Time since first log entry (milliseconds)
+ * - papers_analyzed: Count of PAPER_ANALYSIS log entries
+ * - hypotheses_generated: Count of HYPOTHESIS_GENERATION entries
+ * - proposals_created: Count of on-chain proposals
+ * - peer_reviews_completed: Count of PEER_REVIEW entries
+ * - datasets_curated: Count of DATA_CURATION entries
+ * - acp_jobs_completed: Count of completed ACP jobs
+ * - last_activity: Timestamp of most recent activity
+ */
 router.get('/status', (req: Request, res: Response) => {
   try {
+    // Read all log entries from research_log.json
     const logs = getResearchLog();
 
+    // Count different types of agent activities by filtering log entries
     const papersAnalyzed = logs.filter((log) => log.type === 'PAPER_ANALYSIS').length;
     const hypothesesGenerated = logs.filter((log) => log.type === 'HYPOTHESIS_GENERATION').length;
     const peerReviewsCompleted = logs.filter((log) => log.type === 'PEER_REVIEW').length;
     const dataCurationsCompleted = logs.filter((log) => log.type === 'DATA_CURATION').length;
 
-    // Count ACP jobs
+    // Count completed ACP (Agent Commerce Protocol) jobs
+    // These represent inter-agent communication and coordination
     const acpJobs = logs.filter((log) => log.message.includes('ACP Job completed'));
 
-    // Get last activity timestamp
+    // Get timestamp of most recent activity
     const lastActivity = logs.length > 0 ? logs[logs.length - 1].timestamp : new Date().toISOString();
 
-    // Calculate uptime (time since first log entry)
+    // Calculate uptime: time since agent started (first log entry)
     const firstLog = logs.length > 0 ? new Date(logs[0].timestamp) : new Date();
     const uptime = Date.now() - firstLog.getTime();
 
+    // Build status response object
     const status: AgentStatus = {
       agent_status: 'active',
       uptime,
       papers_analyzed: papersAnalyzed,
       hypotheses_generated: hypothesesGenerated,
-      proposals_created: 0, // Will be updated when we integrate with smart contracts
+      proposals_created: 0, // Updated by PROPOSAL_CREATED log entries
       peer_reviews_completed: peerReviewsCompleted,
       datasets_curated: dataCurationsCompleted,
       acp_jobs_completed: acpJobs.length,
@@ -154,46 +174,77 @@ router.get('/papers', (req: Request, res: Response) => {
   }
 });
 
-// GET /api/proposals - Funding proposals
+/**
+ * GET /api/proposals - Funding proposals
+ *
+ * Returns all on-chain funding proposals created from approved hypotheses.
+ * Proposals are created automatically when a hypothesis is approved by peer review.
+ *
+ * This endpoint:
+ * 1. Reads PROPOSAL_CREATED log entries from research_log.json
+ * 2. Transforms raw proposal data into frontend-friendly format
+ * 3. Calculates deadline from creation timestamp + duration
+ * 4. Parses funding goals (handles "0.1 ETH" → 0.1)
+ * 5. Creates user-friendly titles from hypothesis text
+ * 6. Sorts proposals by creation date (newest first)
+ *
+ * Each proposal includes:
+ * - id: On-chain proposal ID
+ * - hypothesis_id: Reference to original hypothesis
+ * - title: First 80 chars of hypothesis (for display)
+ * - description: Full hypothesis text + methodology
+ * - funding_goal: Target amount in ETH
+ * - current_funding: Current funding amount (updated by events)
+ * - deadline: ISO timestamp when funding closes
+ * - status: 'active' | 'funded' | 'completed'
+ * - tx_hash: Transaction hash on Base Sepolia
+ * - on_chain_address: Contract address
+ */
 router.get('/proposals', (req: Request, res: Response) => {
   try {
     const logs = getResearchLog();
     const proposals: Proposal[] = [];
 
-    // Find PROPOSAL_CREATED log entries
+    // Filter for proposal creation events
+    // These are logged by coordinator.ts after calling createProposal()
     const proposalLogs = logs.filter((log) => log.type === 'PROPOSAL_CREATED');
 
     proposalLogs.forEach((proposalLog) => {
       if (proposalLog.data) {
         const data = proposalLog.data;
 
-        // Calculate deadline from created_at + duration
+        // Calculate deadline: creation time + duration
+        // Example: created Jan 1 + 30 days = deadline Jan 31
         const createdAt = new Date(proposalLog.timestamp);
         const durationDays = data.duration || 30;
         const deadline = new Date(createdAt.getTime() + durationDays * 24 * 60 * 60 * 1000);
 
-        // Parse funding goal (remove "ETH" suffix if present and convert to number)
+        // Parse funding goal from string to number
+        // Handles both "0.1" and "0.1 ETH" formats
         const fundingGoalStr = (data.fundingGoal || '0.1').toString().replace(/\s*ETH\s*/i, '');
         const fundingGoal = parseFloat(fundingGoalStr) || 0.1;
 
-        // Create title from hypothesis (first 80 chars)
+        // Create display title from hypothesis text
+        // Truncate to 80 chars for UI readability
         const title = data.hypothesis
           ? data.hypothesis.substring(0, 80) + (data.hypothesis.length > 80 ? '...' : '')
           : `Research Proposal ${data.proposalId}`;
 
-        // Create full description from hypothesis and methodology
+        // Full description includes hypothesis + methodology
+        // Used in expanded proposal view
         const description = data.hypothesis || data.methodology || 'On-chain research funding proposal';
 
+        // Build proposal object matching frontend Proposal type
         const proposal: Proposal = {
           id: data.proposalId?.toString() || '0',
           hypothesis_id: data.hypothesis_id,
           title: title,
           description: description,
           funding_goal: fundingGoal,
-          current_funding: 0,
+          current_funding: 0, // TODO: Query blockchain for current funding
           deadline: deadline.toISOString(),
           created_at: proposalLog.timestamp,
-          status: 'active',
+          status: 'active', // TODO: Check on-chain status
           tx_hash: data.txHash,
           on_chain_address: data.txHash,
         };
@@ -201,7 +252,8 @@ router.get('/proposals', (req: Request, res: Response) => {
       }
     });
 
-    // Sort by created_at (most recent first)
+    // Sort by creation date (newest first)
+    // Most recent proposals appear at top of list
     proposals.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
 
     res.json({ proposals });

@@ -51,14 +51,28 @@ const ProposalsList: React.FC<ProposalsListProps> = ({ proposals, loading }) => 
     setExpandedId(expandedId === id ? null : id);
   };
 
+  /**
+   * handleFund - Funds a proposal through smart contract interaction
+   *
+   * This function implements the complete funding workflow:
+   * 1. Authenticates user with Privy (email/social/Web3 wallet)
+   * 2. Gets wallet provider from Privy
+   * 3. Creates ethers.js contract instance
+   * 4. Calls fundProposal() on Base Sepolia
+   * 5. Waits for transaction confirmation
+   * 6. Updates UI optimistically (immediate feedback)
+   *
+   * @param proposalId - The ID of the proposal to fund
+   * @returns Promise<void>
+   */
   const handleFund = async (proposalId: string) => {
-    // If not authenticated, prompt login
+    // Check authentication - if not logged in, trigger Privy login modal
     if (!ready || !authenticated) {
       login();
       return;
     }
 
-    // Get the first wallet (embedded or connected)
+    // Get the user's wallet from Privy (could be embedded or external)
     const wallet = wallets[0];
     if (!wallet) {
       alert('No wallet found. Please connect a wallet first.');
@@ -66,36 +80,43 @@ const ProposalsList: React.FC<ProposalsListProps> = ({ proposals, loading }) => 
     }
 
     try {
+      // Set button to loading state
       setFundingState(prev => ({ ...prev, [proposalId]: 'pending' }));
 
-      // Get the Ethereum provider from the wallet
+      // Get Ethereum provider from Privy wallet
       const ethereumProvider = await wallet.getEthereumProvider();
 
-      // Use ethers v6 BrowserProvider and Contract
+      // Dynamically import ethers.js to reduce bundle size
       const { BrowserProvider, Contract, parseEther: parseEtherEthers } = await import('ethers');
+
+      // Create ethers provider from Privy's provider
       const provider = new BrowserProvider(ethereumProvider);
+
+      // Get signer (account that will sign the transaction)
       const signer = await provider.getSigner();
 
-      // Contract address and ABI
+      // ResearchToken.sol contract address on Base Sepolia
       const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS || '0x1221aBCe7D8FB1ba4cF9293E94539cb45e7857fE';
 
-      // Minimal ABI for fundProposal function
+      // Minimal ABI - only the function we need to call
+      // Full ABI in config/ResearchToken.json
       const contractABI = [
         'function fundProposal(uint256 proposalId, uint256 amount) external'
       ];
 
-      // Create contract instance
+      // Create contract instance connected to signer
       const contract = new Contract(contractAddress, contractABI, signer);
 
-      // Funding amount
-      const fundingAmount = parseEtherEthers('0.0001'); // 0.0001 ETH
+      // Convert 0.0001 ETH to wei (smallest unit)
+      const fundingAmount = parseEtherEthers('0.0001');
 
       console.log('Funding proposal...', {
         proposalId,
         amount: '0.0001 ETH'
       });
 
-      // Call fundProposal function
+      // Call the smart contract function
+      // This sends a transaction to Base Sepolia blockchain
       const tx = await contract.fundProposal(
         proposalId,
         fundingAmount
@@ -103,13 +124,17 @@ const ProposalsList: React.FC<ProposalsListProps> = ({ proposals, loading }) => 
 
       console.log('Transaction sent:', tx.hash);
 
-      // Wait for transaction to be mined
+      // Wait for the transaction to be mined (confirmed on blockchain)
       await tx.wait();
 
+      // Update button to success state
       setFundingState(prev => ({ ...prev, [proposalId]: 'success' }));
+
+      // Store transaction hash for BaseScan link
       setTxHash(prev => ({ ...prev, [proposalId]: tx.hash }));
 
-      // Update local funding state immediately (optimistic update)
+      // Optimistic UI update - show progress immediately
+      // The dashboard auto-refreshes every 5 seconds to sync with real data
       setLocalFunding(prev => ({
         ...prev,
         [proposalId]: (prev[proposalId] || 0) + 0.0001
@@ -117,17 +142,20 @@ const ProposalsList: React.FC<ProposalsListProps> = ({ proposals, loading }) => 
 
       console.log('Funding confirmed:', tx.hash);
 
-      // Show success message
+      // Show success notification to user
       alert(`✅ Successfully funded proposal with 0.0001 ETH!\n\nProgress will update automatically.`);
     } catch (error) {
       console.error('Funding error:', error);
+
+      // Update button to error state
       setFundingState(prev => ({ ...prev, [proposalId]: 'error' }));
 
-      // Show user-friendly error
+      // Show user-friendly error message
+      // Common errors: insufficient balance, user rejected, network issues
       const errorMessage = error instanceof Error ? error.message : 'Transaction failed';
       alert(`Funding failed: ${errorMessage}`);
 
-      // Reset error state after 3 seconds
+      // Auto-reset error state after 3 seconds
       setTimeout(() => {
         setFundingState(prev => ({ ...prev, [proposalId]: 'idle' }));
       }, 3000);
