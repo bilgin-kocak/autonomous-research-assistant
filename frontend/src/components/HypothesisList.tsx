@@ -51,7 +51,7 @@ const HypothesisList: React.FC<HypothesisListProps> = ({ hypotheses, loading }) 
     setExpandedId(expandedId === id ? null : id);
   };
 
-  const handleFund = async (hypothesisId: string) => {
+  const handleCreateProposal = async (hypothesis: Hypothesis) => {
     // If not authenticated, prompt login
     if (!ready || !authenticated) {
       login();
@@ -66,43 +66,67 @@ const HypothesisList: React.FC<HypothesisListProps> = ({ hypotheses, loading }) 
     }
 
     try {
-      setFundingState(prev => ({ ...prev, [hypothesisId]: 'pending' }));
+      setFundingState(prev => ({ ...prev, [hypothesis.id]: 'pending' }));
 
       // Get the Ethereum provider from the wallet
       const ethereumProvider = await wallet.getEthereumProvider();
 
-      // Use ethers v6 BrowserProvider
-      const { BrowserProvider } = await import('ethers');
+      // Use ethers v6 BrowserProvider and Contract
+      const { BrowserProvider, Contract, parseEther: parseEtherEthers } = await import('ethers');
       const provider = new BrowserProvider(ethereumProvider);
       const signer = await provider.getSigner();
 
-      // Send transaction to contract address
-      const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
-      const tx = await signer.sendTransaction({
-        to: contractAddress,
-        value: parseEther('0.0001'), // 0.0001 ETH
+      // Contract address and ABI
+      const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS || '0x1221aBCe7D8FB1ba4cF9293E94539cb45e7857fE';
+
+      // Minimal ABI for createProposal function
+      const contractABI = [
+        'function createProposal(string memory hypothesisId, uint256 fundingGoal, uint256 duration) external returns (uint256)'
+      ];
+
+      // Create contract instance
+      const contract = new Contract(contractAddress, contractABI, signer);
+
+      // Proposal parameters
+      const fundingGoal = parseEtherEthers('0.1'); // 0.1 ETH funding goal
+      const duration = 30 * 24 * 60 * 60; // 30 days in seconds
+
+      console.log('Creating proposal on-chain...', {
+        hypothesisId: hypothesis.id,
+        fundingGoal: '0.1 ETH',
+        duration: '30 days'
       });
+
+      // Call createProposal function
+      const tx = await contract.createProposal(
+        hypothesis.id,
+        fundingGoal,
+        duration
+      );
 
       console.log('Transaction sent:', tx.hash);
 
       // Wait for transaction to be mined
-      await tx.wait();
+      const receipt = await tx.wait();
 
-      setFundingState(prev => ({ ...prev, [hypothesisId]: 'success' }));
-      setTxHash(prev => ({ ...prev, [hypothesisId]: tx.hash }));
+      setFundingState(prev => ({ ...prev, [hypothesis.id]: 'success' }));
+      setTxHash(prev => ({ ...prev, [hypothesis.id]: tx.hash }));
 
-      console.log('Transaction confirmed:', tx.hash);
+      console.log('Proposal created!', { txHash: tx.hash, blockNumber: receipt.blockNumber });
+
+      // Show success message
+      alert(`✅ Proposal created successfully!\n\nView your proposal in the "Funding Proposals" tab.`);
     } catch (error) {
-      console.error('Funding error:', error);
-      setFundingState(prev => ({ ...prev, [hypothesisId]: 'error' }));
+      console.error('Proposal creation error:', error);
+      setFundingState(prev => ({ ...prev, [hypothesis.id]: 'error' }));
 
       // Show user-friendly error
       const errorMessage = error instanceof Error ? error.message : 'Transaction failed';
-      alert(`Funding failed: ${errorMessage}`);
+      alert(`Failed to create proposal: ${errorMessage}`);
 
       // Reset error state after 3 seconds
       setTimeout(() => {
-        setFundingState(prev => ({ ...prev, [hypothesisId]: 'idle' }));
+        setFundingState(prev => ({ ...prev, [hypothesis.id]: 'idle' }));
       }, 3000);
     }
   };
@@ -258,7 +282,7 @@ const HypothesisList: React.FC<HypothesisListProps> = ({ hypotheses, loading }) 
                     </div>
                   )}
 
-                  {/* Fund Button */}
+                  {/* Create Proposal Button */}
                   {hypothesis.approved && (
                     <div className="pt-3 border-t border-gray-700 space-y-2">
                       <button
@@ -271,13 +295,13 @@ const HypothesisList: React.FC<HypothesisListProps> = ({ hypotheses, loading }) 
                             ? 'bg-red-600 hover:bg-red-700'
                             : 'bg-primary-500 hover:bg-primary-600'
                         } text-white`}
-                        onClick={() => handleFund(hypothesis.id)}
+                        onClick={() => handleCreateProposal(hypothesis)}
                         disabled={fundingState[hypothesis.id] === 'pending'}
                       >
-                        {fundingState[hypothesis.id] === 'pending' && '⏳ Processing...'}
-                        {fundingState[hypothesis.id] === 'success' && '✅ Funded!'}
+                        {fundingState[hypothesis.id] === 'pending' && '⏳ Creating Proposal...'}
+                        {fundingState[hypothesis.id] === 'success' && '✅ Proposal Created!'}
                         {fundingState[hypothesis.id] === 'error' && '❌ Failed - Try Again'}
-                        {!fundingState[hypothesis.id] || fundingState[hypothesis.id] === 'idle' ? '💰 Fund 0.0001 ETH' : ''}
+                        {!fundingState[hypothesis.id] || fundingState[hypothesis.id] === 'idle' ? '📝 Create On-Chain Proposal' : ''}
                       </button>
 
                       {/* Transaction Hash Link */}

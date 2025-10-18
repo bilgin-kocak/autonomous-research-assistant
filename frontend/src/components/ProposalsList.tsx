@@ -12,6 +12,7 @@ const ProposalsList: React.FC<ProposalsListProps> = ({ proposals, loading }) => 
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [fundingState, setFundingState] = useState<{ [key: string]: 'idle' | 'pending' | 'success' | 'error' }>({});
   const [txHash, setTxHash] = useState<{ [key: string]: string }>({});
+  const [localFunding, setLocalFunding] = useState<{ [key: string]: number }>({});
 
   const { ready, authenticated, login } = usePrivy();
   const { wallets } = useWallets();
@@ -70,17 +71,35 @@ const ProposalsList: React.FC<ProposalsListProps> = ({ proposals, loading }) => 
       // Get the Ethereum provider from the wallet
       const ethereumProvider = await wallet.getEthereumProvider();
 
-      // Use ethers v6 BrowserProvider
-      const { BrowserProvider } = await import('ethers');
+      // Use ethers v6 BrowserProvider and Contract
+      const { BrowserProvider, Contract, parseEther: parseEtherEthers } = await import('ethers');
       const provider = new BrowserProvider(ethereumProvider);
       const signer = await provider.getSigner();
 
-      // Send transaction to contract address
-      const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
-      const tx = await signer.sendTransaction({
-        to: contractAddress,
-        value: parseEther('0.0001'), // 0.0001 ETH
+      // Contract address and ABI
+      const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS || '0x1221aBCe7D8FB1ba4cF9293E94539cb45e7857fE';
+
+      // Minimal ABI for fundProposal function
+      const contractABI = [
+        'function fundProposal(uint256 proposalId, uint256 amount) external'
+      ];
+
+      // Create contract instance
+      const contract = new Contract(contractAddress, contractABI, signer);
+
+      // Funding amount
+      const fundingAmount = parseEtherEthers('0.0001'); // 0.0001 ETH
+
+      console.log('Funding proposal...', {
+        proposalId,
+        amount: '0.0001 ETH'
       });
+
+      // Call fundProposal function
+      const tx = await contract.fundProposal(
+        proposalId,
+        fundingAmount
+      );
 
       console.log('Transaction sent:', tx.hash);
 
@@ -90,7 +109,16 @@ const ProposalsList: React.FC<ProposalsListProps> = ({ proposals, loading }) => 
       setFundingState(prev => ({ ...prev, [proposalId]: 'success' }));
       setTxHash(prev => ({ ...prev, [proposalId]: tx.hash }));
 
-      console.log('Transaction confirmed:', tx.hash);
+      // Update local funding state immediately (optimistic update)
+      setLocalFunding(prev => ({
+        ...prev,
+        [proposalId]: (prev[proposalId] || 0) + 0.0001
+      }));
+
+      console.log('Funding confirmed:', tx.hash);
+
+      // Show success message
+      alert(`✅ Successfully funded proposal with 0.0001 ETH!\n\nProgress will update automatically.`);
     } catch (error) {
       console.error('Funding error:', error);
       setFundingState(prev => ({ ...prev, [proposalId]: 'error' }));
@@ -145,7 +173,13 @@ const ProposalsList: React.FC<ProposalsListProps> = ({ proposals, loading }) => 
       <div className="space-y-4">
         {proposals.map((proposal) => {
           const isExpanded = expandedId === proposal.id;
-          const progressPercentage = getProgressPercentage(proposal.current_funding, proposal.funding_goal);
+
+          // Use local funding if available, otherwise use proposal's current_funding
+          const currentFunding = localFunding[proposal.id] !== undefined
+            ? proposal.current_funding + localFunding[proposal.id]
+            : proposal.current_funding;
+
+          const progressPercentage = getProgressPercentage(currentFunding, proposal.funding_goal);
           const daysRemaining = getDaysRemaining(proposal.deadline);
 
           return (
@@ -180,7 +214,7 @@ const ProposalsList: React.FC<ProposalsListProps> = ({ proposals, loading }) => 
                 <div className="mb-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-sm text-gray-400">
-                      Progress: {(Number(proposal.current_funding) || 0).toFixed(4)} / {(Number(proposal.funding_goal) || 0).toFixed(4)} ETH
+                      Progress: {(Number(currentFunding) || 0).toFixed(4)} / {(Number(proposal.funding_goal) || 0).toFixed(4)} ETH
                     </span>
                     <span className="text-sm font-semibold text-primary-400">
                       {progressPercentage.toFixed(1)}%
