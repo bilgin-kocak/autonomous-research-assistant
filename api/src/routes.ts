@@ -158,37 +158,37 @@ router.get('/papers', (req: Request, res: Response) => {
 router.get('/proposals', (req: Request, res: Response) => {
   try {
     const logs = getResearchLog();
-    const contract = getContractConfig();
     const proposals: Proposal[] = [];
 
-    // Find hypotheses that are ready for proposals
-    const readyForProposal = logs.filter(
-      (log) =>
-        log.message.includes('ready for on-chain proposal') ||
-        log.message.includes('Ready for Proposal: ✅')
-    );
+    // Find PROPOSAL_CREATED log entries
+    const proposalLogs = logs.filter((log) => log.type === 'PROPOSAL_CREATED');
 
-    readyForProposal.forEach((log, index) => {
-      // Find the corresponding peer review
-      const peerReviewLog = logs.find(
-        (l) => l.type === 'PEER_REVIEW' && l.data?.approved === true
-      );
+    proposalLogs.forEach((proposalLog) => {
+      if (proposalLog.data) {
+        const data = proposalLog.data;
 
-      if (peerReviewLog && peerReviewLog.data) {
+        // Calculate deadline from created_at + duration
+        const createdAt = new Date(proposalLog.timestamp);
+        const durationDays = data.duration || 30;
+        const deadline = new Date(createdAt.getTime() + durationDays * 24 * 60 * 60 * 1000);
+
         const proposal: Proposal = {
-          id: index + 1,
-          hypothesis_id: peerReviewLog.data.hypothesis_id,
-          hypothesis_preview: `Hypothesis ${peerReviewLog.data.hypothesis_id}`,
-          funding_goal: '0.1 ETH',
-          current_funding: '0 ETH',
-          deadline: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 days from now
-          created_at: log.timestamp,
+          id: parseInt(data.proposalId) || 0,
+          hypothesis_id: data.hypothesis_id,
+          hypothesis_preview: data.hypothesis?.substring(0, 100) || `Research proposal ${data.proposalId}`,
+          funding_goal: data.fundingGoal || '0.1',
+          current_funding: '0',
+          deadline: deadline.toISOString(),
+          created_at: proposalLog.timestamp,
           status: 'active',
-          tx_hash: contract?.address || undefined,
+          tx_hash: data.txHash,
         };
         proposals.push(proposal);
       }
     });
+
+    // Sort by created_at (most recent first)
+    proposals.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
 
     res.json({ proposals });
   } catch (error) {
