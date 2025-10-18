@@ -282,6 +282,7 @@ async function main() {
     log(`   👨‍🔬 Peer review score: ${result.peer_review.overall_score.toFixed(1)}/10`, 'cyan');
     log(`   📚 Datasets found: ${result.datasets?.length || 0}`, 'cyan');
     log(`   ✅ Approved: ${result.approved ? 'YES' : 'NO'}`, result.approved ? 'green' : 'red');
+    log(`   💰 Proposal created: ${result.ready_for_proposal ? 'YES' : 'NO'}`, result.ready_for_proposal ? 'green' : 'red');
     log('', 'reset');
 
     log('🌐 Next Steps:', 'bright');
@@ -297,6 +298,9 @@ async function main() {
     log('   ✓ Novel hypothesis generated from gaps', 'green');
     log('   ✓ Multi-agent peer review via ACP', 'green');
     log('   ✓ Real dataset searches performed', 'green');
+    if (result.ready_for_proposal) {
+      log('   ✓ Proposal created on Base blockchain', 'green');
+    }
     log('   ✓ All data logged to research_log.json', 'green');
     log('', 'reset');
 
