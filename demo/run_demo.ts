@@ -175,6 +175,21 @@ async function main() {
     // Use the first (best) hypothesis
     const selectedHypothesis = hypothesisData.hypotheses[0];
 
+    // Log the complete hypothesis to research_log.json for the dashboard
+    Logger.hypothesisGeneration('Generated top hypothesis for workflow', {
+      hypothesis_id: `demo_${Date.now()}`,
+      hypothesis: selectedHypothesis.hypothesis,
+      methodology: selectedHypothesis.methodology,
+      rationale: selectedHypothesis.rationale,
+      expected_impact: selectedHypothesis.expected_impact,
+      field: researchTopic,
+      novelty_score: selectedHypothesis.novelty_score,
+      feasibility_score: selectedHypothesis.feasibility_score,
+      impact_score: selectedHypothesis.impact_score,
+      rigor_score: selectedHypothesis.rigor_score,
+      overall_score: selectedHypothesis.overall_score
+    });
+
     log('📝 Generated Hypothesis (Top Scored):', 'bright');
     log(`   "${selectedHypothesis.hypothesis}"`, 'cyan');
     log('', 'reset');

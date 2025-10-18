@@ -96,69 +96,12 @@ router.get('/hypotheses', (req: Request, res: Response) => {
             log.message.includes(reviewData.hypothesis_id)
         );
 
-        // Find strengths, weaknesses, recommendations from logs
-        const feedbackLogs = logs.filter(
-          (log) =>
-            log.message.includes(reviewData.hypothesis_id) &&
-            (log.message.includes('Strengths') ||
-              log.message.includes('Weaknesses') ||
-              log.message.includes('Recommendations'))
-        );
-
-        // Extract strengths
-        const strengthsIndex = logs.findIndex(
-          (log) => log.message === '\n💪 Strengths:' &&
-            logs.indexOf(log) > logs.indexOf(review)
-        );
-        const strengths: string[] = [];
-        if (strengthsIndex !== -1) {
-          for (let i = strengthsIndex + 1; i < logs.length; i++) {
-            if (logs[i].message.startsWith('  ') && !logs[i].message.includes('⚠️') && !logs[i].message.includes('💡')) {
-              strengths.push(logs[i].message.trim().replace(/^\d+\.\s*/, ''));
-            } else if (logs[i].message.includes('⚠️') || logs[i].message.includes('💡')) {
-              break;
-            }
-          }
-        }
-
-        // Extract weaknesses
-        const weaknessesIndex = logs.findIndex(
-          (log) => log.message === '\n⚠️  Weaknesses:' &&
-            logs.indexOf(log) > logs.indexOf(review)
-        );
-        const weaknesses: string[] = [];
-        if (weaknessesIndex !== -1) {
-          for (let i = weaknessesIndex + 1; i < logs.length; i++) {
-            if (logs[i].message.startsWith('  ') && !logs[i].message.includes('💡')) {
-              weaknesses.push(logs[i].message.trim().replace(/^\d+\.\s*/, ''));
-            } else if (logs[i].message.includes('💡')) {
-              break;
-            }
-          }
-        }
-
-        // Extract recommendations
-        const recommendationsIndex = logs.findIndex(
-          (log) => log.message === '\n💡 Recommendations:' &&
-            logs.indexOf(log) > logs.indexOf(review)
-        );
-        const recommendations: string[] = [];
-        if (recommendationsIndex !== -1) {
-          for (let i = recommendationsIndex + 1; i < logs.length; i++) {
-            if (logs[i].message.startsWith('  ') && !logs[i].message.includes('📚') && !logs[i].message.includes('🎯')) {
-              recommendations.push(logs[i].message.trim().replace(/^\d+\.\s*/, ''));
-            } else if (logs[i].message.includes('📚') || logs[i].message.includes('🎯')) {
-              break;
-            }
-          }
-        }
-
         const hypothesis: Hypothesis = {
-          id: reviewData.hypothesis_id,
-          hypothesis: `Research hypothesis for ${review.data.field || 'unknown field'}`,
-          field: review.data.field || 'unknown',
-          novelty_score: reviewData.novelty || 0,
-          feasibility_score: reviewData.feasibility || 0,
+          id: reviewData.hypothesis_id || 'unknown',
+          hypothesis: reviewData.hypothesis || `Research hypothesis for ${reviewData.field || 'unknown field'}`,
+          field: reviewData.field || 'unknown',
+          novelty_score: reviewData.novelty_score || reviewData.novelty || 0,
+          feasibility_score: reviewData.feasibility_score || reviewData.feasibility || 0,
           impact_score: reviewData.impact_score || reviewData.impact || 0,
           rigor_score: reviewData.rigor_score || reviewData.rigor || 0,
           overall_score: reviewData.overall_score || 0,
@@ -166,9 +109,9 @@ router.get('/hypotheses', (req: Request, res: Response) => {
           generated_at: review.timestamp,
           reviewed_at: review.timestamp,
           datasets_found: datasetsLog?.data?.datasets?.length || 0,
-          strengths: strengths.length > 0 ? strengths : undefined,
-          weaknesses: weaknesses.length > 0 ? weaknesses : undefined,
-          recommendations: recommendations.length > 0 ? recommendations : undefined,
+          strengths: reviewData.strengths || undefined,
+          weaknesses: reviewData.weaknesses || undefined,
+          recommendations: reviewData.recommendations || undefined,
         };
 
         hypotheses.push(hypothesis);

@@ -223,6 +223,25 @@ export class ResearchCoordinator {
         field
       );
 
+      // Log complete peer review data for dashboard
+      Logger.log('PEER_REVIEW' as any, `Peer review completed for ${hypothesisId}`, {
+        hypothesis_id: hypothesisId,
+        field,
+        hypothesis,
+        methodology,
+        overall_score: peerReview.overall_score,
+        novelty_score: peerReview.novelty_score,
+        feasibility_score: peerReview.feasibility_score,
+        impact_score: peerReview.impact_score,
+        rigor_score: peerReview.rigor_score,
+        approved: peerReview.approved,
+        reviewer_confidence: peerReview.reviewer_confidence,
+        feedback: peerReview.feedback,
+        strengths: peerReview.strengths,
+        weaknesses: peerReview.weaknesses,
+        recommendations: peerReview.recommendations
+      }, 'ResearchCoordinator');
+
       Logger.info(`✓ Peer review complete: ${peerReview.approved ? 'APPROVED' : 'NEEDS IMPROVEMENT'}`, {
         overall_score: peerReview.overall_score,
         novelty: peerReview.novelty_score,
