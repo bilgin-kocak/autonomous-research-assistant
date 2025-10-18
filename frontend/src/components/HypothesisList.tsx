@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { usePrivy, useWallets } from '@privy-io/react-auth';
+import { parseEther } from 'viem';
 import type { Hypothesis } from '../types';
 import { getScoreColor, getScoreBgColor } from '../types';
 
@@ -9,6 +11,11 @@ interface HypothesisListProps {
 
 const HypothesisList: React.FC<HypothesisListProps> = ({ hypotheses, loading }) => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [fundingState, setFundingState] = useState<{ [key: string]: 'idle' | 'pending' | 'success' | 'error' }>({});
+  const [txHash, setTxHash] = useState<{ [key: string]: string }>({});
+
+  const { ready, authenticated, login } = usePrivy();
+  const { wallets } = useWallets();
 
   if (loading) {
     return (
@@ -42,6 +49,62 @@ const HypothesisList: React.FC<HypothesisListProps> = ({ hypotheses, loading }) 
 
   const toggleExpand = (id: string) => {
     setExpandedId(expandedId === id ? null : id);
+  };
+
+  const handleFund = async (hypothesisId: string) => {
+    // If not authenticated, prompt login
+    if (!ready || !authenticated) {
+      login();
+      return;
+    }
+
+    // Get the first wallet (embedded or connected)
+    const wallet = wallets[0];
+    if (!wallet) {
+      alert('No wallet found. Please connect a wallet first.');
+      return;
+    }
+
+    try {
+      setFundingState(prev => ({ ...prev, [hypothesisId]: 'pending' }));
+
+      // Get the Ethereum provider from the wallet
+      const ethereumProvider = await wallet.getEthereumProvider();
+
+      // Use ethers v6 BrowserProvider
+      const { BrowserProvider } = await import('ethers');
+      const provider = new BrowserProvider(ethereumProvider);
+      const signer = await provider.getSigner();
+
+      // Send transaction to contract address
+      const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
+      const tx = await signer.sendTransaction({
+        to: contractAddress,
+        value: parseEther('0.0001'), // 0.0001 ETH
+      });
+
+      console.log('Transaction sent:', tx.hash);
+
+      // Wait for transaction to be mined
+      await tx.wait();
+
+      setFundingState(prev => ({ ...prev, [hypothesisId]: 'success' }));
+      setTxHash(prev => ({ ...prev, [hypothesisId]: tx.hash }));
+
+      console.log('Transaction confirmed:', tx.hash);
+    } catch (error) {
+      console.error('Funding error:', error);
+      setFundingState(prev => ({ ...prev, [hypothesisId]: 'error' }));
+
+      // Show user-friendly error
+      const errorMessage = error instanceof Error ? error.message : 'Transaction failed';
+      alert(`Funding failed: ${errorMessage}`);
+
+      // Reset error state after 3 seconds
+      setTimeout(() => {
+        setFundingState(prev => ({ ...prev, [hypothesisId]: 'idle' }));
+      }, 3000);
+    }
   };
 
   const ScoreBadge: React.FC<{ label: string; score: number }> = ({ label, score }) => (
@@ -197,13 +260,37 @@ const HypothesisList: React.FC<HypothesisListProps> = ({ hypotheses, loading }) 
 
                   {/* Fund Button */}
                   {hypothesis.approved && (
-                    <div className="pt-3 border-t border-gray-700">
+                    <div className="pt-3 border-t border-gray-700 space-y-2">
                       <button
-                        className="w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-                        onClick={() => alert('Funding mechanism coming soon!')}
+                        className={`w-full font-semibold py-2 px-4 rounded-lg transition-colors ${
+                          fundingState[hypothesis.id] === 'pending'
+                            ? 'bg-gray-600 cursor-not-allowed'
+                            : fundingState[hypothesis.id] === 'success'
+                            ? 'bg-green-600 hover:bg-green-700'
+                            : fundingState[hypothesis.id] === 'error'
+                            ? 'bg-red-600 hover:bg-red-700'
+                            : 'bg-primary-500 hover:bg-primary-600'
+                        } text-white`}
+                        onClick={() => handleFund(hypothesis.id)}
+                        disabled={fundingState[hypothesis.id] === 'pending'}
                       >
-                        💰 Fund This Hypothesis
+                        {fundingState[hypothesis.id] === 'pending' && '⏳ Processing...'}
+                        {fundingState[hypothesis.id] === 'success' && '✅ Funded!'}
+                        {fundingState[hypothesis.id] === 'error' && '❌ Failed - Try Again'}
+                        {!fundingState[hypothesis.id] || fundingState[hypothesis.id] === 'idle' ? '💰 Fund 0.0001 ETH' : ''}
                       </button>
+
+                      {/* Transaction Hash Link */}
+                      {txHash[hypothesis.id] && (
+                        <a
+                          href={`https://sepolia.basescan.org/tx/${txHash[hypothesis.id]}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block text-center text-sm text-primary-400 hover:text-primary-300 transition-colors"
+                        >
+                          View on BaseScan ↗
+                        </a>
+                      )}
                     </div>
                   )}
                 </div>

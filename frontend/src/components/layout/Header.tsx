@@ -1,5 +1,6 @@
 import React from "react";
-import { Sparkles, ChevronDown } from "lucide-react";
+import { Sparkles, ChevronDown, Wallet, LogOut } from "lucide-react";
+import { usePrivy } from "@privy-io/react-auth";
 
 interface HeaderProps {
   activeTab?: string;
@@ -7,12 +8,22 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
+  const { ready, authenticated, user, login, logout } = usePrivy();
+
   const navItems = [
     { id: "overview", label: "Dashboard" },
     { id: "hypotheses", label: "Hypotheses" },
     { id: "papers", label: "Papers" },
     { id: "agents", label: "Agents" },
   ];
+
+  // Format wallet address to show first 6 and last 4 characters
+  const formatAddress = (address: string) => {
+    return `${address.substring(0, 6)}...${address.substring(address.length - 4)}`;
+  };
+
+  // Get user's wallet address
+  const walletAddress = user?.wallet?.address;
 
   return (
     <header className="bg-[#0D1117] border-b border-[#1E2738] sticky top-0 z-50">
@@ -60,14 +71,37 @@ const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
             </nav>
           </div>
 
-          {/* Right Side Actions */}
+          {/* Right Side Actions - Wallet Connection */}
           <div className="flex items-center space-x-3">
-            <button className="px-4 py-2 text-sm font-medium text-white hover:text-primary-500 transition-colors">
-              Log in
-            </button>
-            <button className="px-6 py-2 bg-primary-500 hover:bg-primary-600 text-white text-sm font-medium rounded-lg transition-colors">
-              Try it free
-            </button>
+            {!ready ? (
+              <div className="px-4 py-2 text-sm text-text-secondary">
+                Loading...
+              </div>
+            ) : authenticated && walletAddress ? (
+              <>
+                <div className="flex items-center space-x-2 px-4 py-2 bg-[rgba(184,199,224,0.12)] rounded-lg border border-primary-500/20">
+                  <Wallet className="w-4 h-4 text-primary-500" />
+                  <span className="text-sm font-medium text-white font-mono">
+                    {formatAddress(walletAddress)}
+                  </span>
+                </div>
+                <button
+                  onClick={logout}
+                  className="px-4 py-2 text-sm font-medium text-text-secondary hover:text-white transition-colors flex items-center space-x-2"
+                >
+                  <LogOut className="w-4 h-4" />
+                  <span>Disconnect</span>
+                </button>
+              </>
+            ) : (
+              <button
+                onClick={login}
+                className="px-6 py-2 bg-primary-500 hover:bg-primary-600 text-white text-sm font-medium rounded-lg transition-colors flex items-center space-x-2"
+              >
+                <Wallet className="w-4 h-4" />
+                <span>Connect Wallet</span>
+              </button>
+            )}
           </div>
         </div>
       </div>
