@@ -18,6 +18,7 @@
 import { Logger } from '../utils/logger';
 import { reviewHypothesis, HypothesisReview } from '../functions/reviewHypothesis';
 import { findDatasets, Dataset } from '../functions/findDatasets';
+import { createProposal } from '../functions/createProposal';
 import { recordReview } from '../agents/peerReviewAgent';
 import { incrementDatasetsFound } from '../agents/dataCuratorAgent';
 
@@ -275,6 +276,44 @@ export class ResearchCoordinator {
 
       if (result.ready_for_proposal) {
         Logger.info('✅ Research workflow complete: Ready for on-chain proposal!');
+        Logger.info('Step 3: Creating on-chain proposal...');
+
+        try {
+          // Automatically create proposal on-chain
+          const proposalResult = await createProposal(
+            hypothesisId,
+            '0.1', // 0.1 ETH funding goal
+            30 // 30 days duration
+          );
+
+          Logger.info('✅ Proposal created successfully!', {
+            proposalId: proposalResult.proposalId,
+            txHash: proposalResult.txHash,
+            explorerUrl: proposalResult.explorerUrl
+          });
+
+          // Log proposal for dashboard
+          Logger.log('PROPOSAL_CREATED' as any, `Created proposal ${proposalResult.proposalId}`, {
+            proposalId: proposalResult.proposalId,
+            hypothesis_id: hypothesisId,
+            hypothesis,
+            methodology,
+            field,
+            fundingGoal: '0.1 ETH',
+            duration: 30,
+            txHash: proposalResult.txHash,
+            blockNumber: proposalResult.blockNumber,
+            explorerUrl: proposalResult.explorerUrl,
+            datasets: datasets,
+            peer_review_score: peerReview.overall_score
+          });
+        } catch (error: any) {
+          Logger.error('Failed to create proposal on-chain', {
+            error: error.message,
+            hypothesis_id: hypothesisId
+          });
+          Logger.warning('Workflow complete but proposal creation failed. May need to create manually.');
+        }
       } else {
         Logger.info('⏸️  Research workflow complete: Not ready for proposal yet');
       }
