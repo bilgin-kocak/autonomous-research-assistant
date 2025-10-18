@@ -84,6 +84,14 @@ export const createProposalFunction = new GameFunction({
     try {
       const { hypothesis_id, funding_amount_eth, duration_days } = args;
 
+      // Validate required arguments
+      if (!hypothesis_id || !funding_amount_eth || !duration_days) {
+        return new ExecutableGameFunctionResponse(
+          ExecutableGameFunctionStatus.Failed,
+          'Missing required arguments: hypothesis_id, funding_amount_eth, and duration_days are all required'
+        );
+      }
+
       Logger.info(
         `Creating on-chain proposal for hypothesis: ${hypothesis_id}`
       );
@@ -94,8 +102,8 @@ export const createProposalFunction = new GameFunction({
       });
 
       // Validate inputs
-      const fundingAmount = parseFloat(funding_amount_eth);
-      const durationDays = parseInt(duration_days, 10);
+      const fundingAmount = parseFloat(funding_amount_eth as string);
+      const durationDays = parseInt(duration_days as string, 10);
 
       if (isNaN(fundingAmount) || fundingAmount <= 0) {
         throw new Error('Invalid funding amount');
@@ -147,7 +155,7 @@ export const createProposalFunction = new GameFunction({
       );
 
       // Convert parameters
-      const fundingGoalWei = ethers.parseEther(funding_amount_eth);
+      const fundingGoalWei = ethers.parseEther(funding_amount_eth as string);
       const durationSeconds = BigInt(durationDays * 24 * 60 * 60);
 
       Logger.info('Submitting transaction to Base Sepolia...');
