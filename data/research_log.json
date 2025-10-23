@@ -1,144 +1,11 @@
 [
   {
-    "timestamp": "2025-10-16T19:18:37.831Z",
-    "type": "INFO",
-    "message": "Starting paper fetch for topic: longevity",
-    "data": {
-      "topic": "longevity",
-      "maxResults": 5
-    }
-  },
-  {
-    "timestamp": "2025-10-16T19:18:37.879Z",
-    "type": "INFO",
-    "message": "Requesting arXiv API: http://export.arxiv.org/api/query?search_query=all:longevity&start=0&max_results=5&sortBy=submittedDate&sortOrder=descending"
-  },
-  {
-    "timestamp": "2025-10-16T19:18:38.424Z",
-    "type": "PAPER_FETCH",
-    "message": "Fetched 5 papers on topic: longevity",
-    "data": {
-      "topic": "longevity",
-      "count": 5
-    }
-  },
-  {
-    "timestamp": "2025-10-16T19:18:41.434Z",
-    "type": "INFO",
-    "message": "Starting paper fetch for topic: aging",
-    "data": {
-      "topic": "aging",
-      "maxResults": 3
-    }
-  },
-  {
-    "timestamp": "2025-10-16T19:18:41.437Z",
-    "type": "INFO",
-    "message": "Requesting arXiv API: http://export.arxiv.org/api/query?search_query=all:aging&start=0&max_results=3&sortBy=submittedDate&sortOrder=descending"
-  },
-  {
-    "timestamp": "2025-10-16T19:18:41.858Z",
-    "type": "PAPER_FETCH",
-    "message": "Fetched 3 papers on topic: aging",
-    "data": {
-      "topic": "aging",
-      "count": 3
-    }
-  },
-  {
-    "timestamp": "2025-10-16T19:18:44.860Z",
-    "type": "INFO",
-    "message": "Starting paper fetch for topic: senescence",
-    "data": {
-      "topic": "senescence",
-      "maxResults": 3
-    }
-  },
-  {
-    "timestamp": "2025-10-16T19:18:44.860Z",
-    "type": "INFO",
-    "message": "Requesting arXiv API: http://export.arxiv.org/api/query?search_query=all:senescence&start=0&max_results=3&sortBy=submittedDate&sortOrder=descending"
-  },
-  {
-    "timestamp": "2025-10-16T19:18:45.298Z",
-    "type": "PAPER_FETCH",
-    "message": "Fetched 3 papers on topic: senescence",
-    "data": {
-      "topic": "senescence",
-      "count": 3
-    }
-  },
-  {
-    "timestamp": "2025-10-17T11:01:28.864Z",
-    "type": "INFO",
-    "message": "Starting hypothesis generation for field: longevity"
-  },
-  {
-    "timestamp": "2025-10-17T11:01:28.899Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for hypothesis generation"
-  },
-  {
-    "timestamp": "2025-10-17T11:01:52.668Z",
-    "type": "INFO",
-    "message": "Received hypotheses from OpenAI"
-  },
-  {
-    "timestamp": "2025-10-17T11:01:52.671Z",
-    "type": "HYPOTHESIS_GENERATION",
-    "message": "Generated hypothesis",
-    "data": {
-      "hypothesis": "Generated 3 hypotheses for longevity",
-      "scores": {
-        "count": 3,
-        "field": "longevity",
-        "scores": [
-          8,
-          8,
-          7.75
-        ]
-      }
-    }
-  },
-  {
-    "timestamp": "2025-10-17T11:01:55.707Z",
-    "type": "INFO",
-    "message": "Starting hypothesis generation for field: aging"
-  },
-  {
-    "timestamp": "2025-10-17T11:01:55.708Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for hypothesis generation"
-  },
-  {
-    "timestamp": "2025-10-17T11:02:32.587Z",
-    "type": "INFO",
-    "message": "Received hypotheses from OpenAI"
-  },
-  {
-    "timestamp": "2025-10-17T11:02:32.592Z",
-    "type": "HYPOTHESIS_GENERATION",
-    "message": "Generated hypothesis",
-    "data": {
-      "hypothesis": "Generated 3 hypotheses for aging",
-      "scores": {
-        "count": 3,
-        "field": "aging",
-        "scores": [
-          8,
-          8,
-          9
-        ]
-      }
-    }
-  },
-  {
-    "timestamp": "2025-10-17T11:24:15.731Z",
+    "timestamp": "2025-10-19T09:14:10.276Z",
     "type": "INFO",
     "message": "Science Agent initialized",
     "data": {
       "name": "Dr. ScienceDAO",
-      "field": "longevity",
+      "field": "machine learning",
       "workers": [
         "researchWorker"
       ],
@@ -147,282 +14,249 @@
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:24:16.496Z",
+    "timestamp": "2025-10-19T09:14:10.305Z",
     "type": "INFO",
-    "message": "Starting ScienceDAO Research Agent",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T11:24:16.497Z",
-    "type": "INFO",
-    "message": "Initializing agent and workers...",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T11:24:17.692Z",
-    "type": "INFO",
-    "message": "✓ Agent initialized successfully!",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T11:24:17.694Z",
-    "type": "INFO",
-    "message": "Starting research activities...",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T11:24:17.695Z",
-    "type": "INFO",
-    "message": "Starting research iteration 1...",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T11:24:20.872Z",
-    "type": "INFO",
-    "message": "Starting paper fetch for topic: longevity",
+    "message": "Starting paper fetch for topic: machine learning",
     "data": {
-      "topic": "longevity",
-      "maxResults": 50
+      "topic": "machine learning",
+      "maxResults": 3
     },
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:24:20.872Z",
+    "timestamp": "2025-10-19T09:14:10.306Z",
     "type": "INFO",
-    "message": "Requesting arXiv API: http://export.arxiv.org/api/query?search_query=all:longevity&start=0&max_results=50&sortBy=submittedDate&sortOrder=descending",
+    "message": "Requesting arXiv API: http://export.arxiv.org/api/query?search_query=all:machine%20learning&start=0&max_results=3&sortBy=submittedDate&sortOrder=descending",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:24:21.649Z",
+    "timestamp": "2025-10-19T09:14:10.856Z",
     "type": "PAPER_FETCH",
-    "message": "Fetched 50 papers on topic: longevity",
+    "message": "Fetched 3 papers on topic: machine learning",
     "data": {
-      "topic": "longevity",
-      "count": 50
+      "topic": "machine learning",
+      "count": 3
     },
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:24:55.572Z",
+    "timestamp": "2025-10-19T09:14:13.859Z",
     "type": "INFO",
-    "message": "Starting analysis for paper: Development of a Linear Guide-Rail Testbed for Physically Emulating ISAM Operations",
+    "message": "Starting analysis for paper: Agentic Design of Compositional Machines",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:24:55.574Z",
+    "timestamp": "2025-10-19T09:14:13.859Z",
     "type": "INFO",
     "message": "Calling OpenAI API for paper analysis",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:25:09.514Z",
+    "timestamp": "2025-10-19T09:14:20.107Z",
     "type": "INFO",
     "message": "Received analysis from OpenAI",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:25:09.515Z",
+    "timestamp": "2025-10-19T09:14:20.107Z",
     "type": "PAPER_ANALYSIS",
-    "message": "Analyzed paper: Development of a Linear Guide-Rail Testbed for Physically Emulating ISAM Operations",
+    "message": "Analyzed paper: Agentic Design of Compositional Machines",
     "data": {
-      "paperTitle": "Development of a Linear Guide-Rail Testbed for Physically Emulating ISAM Operations",
+      "paperTitle": "Agentic Design of Compositional Machines",
       "findings": {
         "findings": [
-          "Serial robotic manipulators are crucial in performing In-Space Servicing, Assembly, and Manufacturing (ISAM) operations.",
-          "Movement of a robotic arm on a free-flying satellite presents a complex controls problem.",
-          "The development of a Linear Guide-Rail Testbed can help in physically emulating ISAM operations."
+          "Large language models (LLMs) have the potential to learn creative tasks such as compositional machine design.",
+          "Machines can be assembled from standardized components to meet functional demands in a simulated physical environment."
         ],
-        "methodology": "The paper proposes the development of a Linear Guide-Rail Testbed to physically emulate ISAM operations. This involves the use of serial robotic manipulators and the study of the complex perturbation forces and motions associated with the movement of a robotic arm on a free-flying satellite.",
+        "methodology": "The study utilized large language models to approach the task of compositional machine design. The machines were assembled from standardized components and their functionality was tested in a simulated physical environment.",
         "gaps": [
-          "The paper does not provide a detailed analysis of the Linear Guide-Rail Testbed's performance in different scenarios.",
-          "There is a lack of comprehensive study on the impact of various perturbation forces on the robotic arm's movement.",
-          "The paper does not discuss the potential limitations and challenges in implementing the Linear Guide-Rail Testbed for ISAM operations."
+          "The study does not provide a detailed analysis of the limitations and potential errors of using LLMs in compositional machine design.",
+          "The study does not explore the application of this approach in real-world physical environments, only simulated ones."
         ],
         "next_steps": [
-          "Conduct a detailed performance analysis of the Linear Guide-Rail Testbed in various ISAM scenarios.",
-          "Perform a comprehensive study to understand the impact of different perturbation forces on the robotic arm's movement.",
-          "Identify and address potential challenges and limitations in implementing the Linear Guide-Rail Testbed for ISAM operations."
+          "Future research could focus on identifying and addressing the limitations and potential errors of using LLMs in compositional machine design.",
+          "Research could also be conducted to explore the application of this approach in real-world physical environments, not just simulated ones."
         ]
       }
     },
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:25:42.871Z",
+    "timestamp": "2025-10-19T09:14:20.108Z",
     "type": "INFO",
-    "message": "Starting analysis for paper: Recent Advances in Microfluidics and Bioelectronics for Three-Dimensional Organoid Interfaces",
+    "message": "Starting analysis for paper: Learning an Image Editing Model without Image Editing Pairs",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:25:42.872Z",
+    "timestamp": "2025-10-19T09:14:20.108Z",
     "type": "INFO",
     "message": "Calling OpenAI API for paper analysis",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:25:49.744Z",
+    "timestamp": "2025-10-19T09:14:26.669Z",
     "type": "INFO",
     "message": "Received analysis from OpenAI",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:25:49.746Z",
+    "timestamp": "2025-10-19T09:14:26.670Z",
     "type": "PAPER_ANALYSIS",
-    "message": "Analyzed paper: Recent Advances in Microfluidics and Bioelectronics for Three-Dimensional Organoid Interfaces",
+    "message": "Analyzed paper: Learning an Image Editing Model without Image Editing Pairs",
     "data": {
-      "paperTitle": "Recent Advances in Microfluidics and Bioelectronics for Three-Dimensional Organoid Interfaces",
+      "paperTitle": "Learning an Image Editing Model without Image Editing Pairs",
       "findings": {
         "findings": [
-          "Organoids provide a promising alternative in biomedical research and clinical medicine, showing better feature recapitulation than 2D cultures.",
-          "Organoids show more consistent responses with clinical results when compared to animal models.",
-          "Recent advances in materials and microfabrication methods, such as 3D printing and compressive buckling, have been made."
+          "Recent image editing models have achieved impressive results while following natural language editing instructions.",
+          "These models rely on supervised fine-tuning with large datasets of input-target pairs, which is a critical bottleneck.",
+          "Current workarounds use synthetic training pairs that leverage the zero-shot capabilities of existing models, but this can propagate and magnify the artifacts of the pretrained model into the final trained model."
         ],
-        "methodology": "The paper reviews recent advancements in the field of organoids, specifically focusing on the use of materials and microfabrication methods like 3D printing and compressive buckling. It compares the effectiveness of organoids with 2D cultures and animal models.",
+        "methodology": "The paper discusses the use of supervised fine-tuning with large datasets of input-target pairs in image editing models. It also mentions the use of synthetic training pairs that leverage the zero-shot capabilities of existing models as a workaround to the challenges of curating naturally occurring pairs at scale.",
         "gaps": [
-          "There are challenges in maintaining the longevity of organoid culture.",
-          "Reproducibility of organoid properties is a major issue.",
-          "Development of non-disruptive monitoring methods for organoids is still lacking."
+          "The paper does not provide a solution to the bottleneck of relying on large datasets of input-target pairs for supervised fine-tuning.",
+          "The paper does not explore the potential negative impacts of using synthetic training pairs, such as the propagation and magnification of artifacts from the pretrained model."
         ],
         "next_steps": [
-          "Further research is needed to improve the longevity of organoid cultures.",
-          "Investigate methods to increase the reproducibility of organoid properties.",
-          "Develop non-disruptive monitoring methods for organoids."
+          "Future research could focus on developing alternative methods to supervised fine-tuning that do not rely on large datasets of input-target pairs.",
+          "Research could also be conducted to mitigate the negative impacts of using synthetic training pairs, such as developing techniques to reduce the propagation and magnification of artifacts from the pretrained model."
         ]
       }
     },
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:26:22.812Z",
+    "timestamp": "2025-10-19T09:14:26.671Z",
     "type": "INFO",
-    "message": "Starting hypothesis generation for field: longevity",
+    "message": "Starting analysis for paper: Terra: Explorable Native 3D World Model with Point Latents",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:26:22.814Z",
+    "timestamp": "2025-10-19T09:14:26.671Z",
+    "type": "INFO",
+    "message": "Calling OpenAI API for paper analysis",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:14:33.948Z",
+    "type": "INFO",
+    "message": "Received analysis from OpenAI",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:14:33.950Z",
+    "type": "PAPER_ANALYSIS",
+    "message": "Analyzed paper: Terra: Explorable Native 3D World Model with Point Latents",
+    "data": {
+      "paperTitle": "Terra: Explorable Native 3D World Model with Point Latents",
+      "findings": {
+        "findings": [
+          "The paper presents Terra, a new 3D world model that represents and generates explorable environments in an intrinsic 3D latent space.",
+          "Terra outperforms pixel-aligned representations in terms of 3D consistency and modeling efficiency.",
+          "The model can generate explorable environments, which could be beneficial for applications in virtual reality, gaming, and autonomous navigation."
+        ],
+        "methodology": "The researchers developed Terra, a 3D world model, and compared its performance with existing pixel-aligned representations. They evaluated the model's 3D consistency and modeling efficiency.",
+        "gaps": [
+          "The paper does not discuss the computational requirements of the Terra model.",
+          "The paper does not provide a detailed comparison of Terra with other 3D world models.",
+          "The paper does not discuss the limitations of the Terra model."
+        ],
+        "next_steps": [
+          "Future research could investigate the computational requirements of the Terra model.",
+          "Future research could compare Terra with other 3D world models in a more detailed manner.",
+          "Future research could explore the limitations of the Terra model and ways to overcome them."
+        ]
+      }
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:14:33.951Z",
+    "type": "INFO",
+    "message": "Starting hypothesis generation for field: machine learning",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:14:33.951Z",
     "type": "INFO",
     "message": "Calling OpenAI API for hypothesis generation",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:26:40.356Z",
+    "timestamp": "2025-10-19T09:14:51.880Z",
     "type": "INFO",
     "message": "Received hypotheses from OpenAI",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:26:40.357Z",
+    "timestamp": "2025-10-19T09:14:51.881Z",
     "type": "HYPOTHESIS_GENERATION",
     "message": "Generated hypothesis",
     "data": {
-      "hypothesis": "Generated 3 hypotheses for longevity",
+      "hypothesis": "Generated 3 hypotheses for machine learning",
       "scores": {
         "count": 3,
-        "field": "longevity",
+        "field": "machine learning",
         "scores": [
           8,
-          8.25,
-          8
+          7.75,
+          7.75
         ]
       }
     },
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T11:27:13.465Z",
-    "type": "INFO",
-    "message": "Research iteration completed successfully in 175769ms",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T11:27:13.466Z",
-    "type": "INFO",
-    "message": "Single iteration completed successfully",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T11:27:13.468Z",
-    "type": "INFO",
-    "message": "Agent completed all iterations",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:32.390Z",
-    "type": "INFO",
-    "message": "Science Agent initialized",
+    "timestamp": "2025-10-19T09:14:51.882Z",
+    "type": "HYPOTHESIS_GENERATION",
+    "message": "Generated hypothesis",
     "data": {
-      "name": "Dr. ScienceDAO",
-      "field": "longevity",
-      "workers": [
-        "researchWorker"
-      ],
-      "api_key_set": true
+      "hypothesis": "Generated top hypothesis for workflow",
+      "scores": {
+        "hypothesis_id": "demo_1760865291882",
+        "hypothesis": "If a comprehensive error analysis of Latent Language Models (LLMs) in compositional machine design is conducted, then it will provide insights into model limitations and potential errors, because of the inherent imperfections and biases present in any machine learning model.",
+        "methodology": "Design a series of tests and experiments on various LLMs to identify patterns and common errors. Perform statistical analysis on the results to identify the causes of these errors.",
+        "rationale": "This hypothesis addresses the research gap of the lack of a detailed analysis of the limitations and potential errors of using LLMs in compositional machine design. It is crucial to understand the weaknesses of a model to improve it and make it more robust.",
+        "expected_impact": "Understanding the limitations of LLMs can lead to improved models and more accurate machine designs.",
+        "field": "machine learning",
+        "novelty_score": 8,
+        "feasibility_score": 7,
+        "impact_score": 9,
+        "rigor_score": 8,
+        "overall_score": 8
+      }
     },
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:55:32.415Z",
-    "type": "INFO",
-    "message": "🧪 Starting Multi-Agent Workflow Tests\n",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:32.417Z",
-    "type": "INFO",
-    "message": "\n================================================================================",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:32.417Z",
-    "type": "INFO",
-    "message": "Testing Hypothesis: hyp_001",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:32.418Z",
-    "type": "INFO",
-    "message": "================================================================================\n",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:32.418Z",
-    "type": "INFO",
-    "message": "📝 Hypothesis:",
-    "data": {
-      "hypothesis": "Combining senolytics with NAD+ precursors synergistically reduces markers of cellular aging..."
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:32.419Z",
+    "timestamp": "2025-10-19T09:14:51.883Z",
     "type": "INFO",
     "message": "🚀 Initiating multi-agent research workflow",
     "data": {
-      "hypothesis_id": "hyp_001",
-      "field": "longevity and aging research"
+      "hypothesis_id": "demo_1760865291883",
+      "field": "machine learning"
     },
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:55:32.420Z",
+    "timestamp": "2025-10-19T09:14:51.884Z",
     "type": "INFO",
     "message": "🔄 Starting multi-agent research workflow",
     "data": {
-      "hypothesis_id": "hyp_001",
-      "field": "longevity and aging research"
+      "hypothesis_id": "demo_1760865291883",
+      "field": "machine learning"
     },
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:55:32.420Z",
+    "timestamp": "2025-10-19T09:14:51.885Z",
     "type": "INFO",
     "message": "Step 1: Requesting peer review...",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:55:32.421Z",
+    "timestamp": "2025-10-19T09:14:51.886Z",
     "type": "INFO",
-    "message": "ACP Job created: job_1760712932421_1 (Peer Review)",
+    "message": "ACP Job created: job_1760865291886_1 (Peer Review)",
     "data": {
       "requestor": "research_agent",
       "provider": "peer_reviewer"
@@ -430,50 +264,50 @@
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:55:32.422Z",
+    "timestamp": "2025-10-19T09:14:51.887Z",
     "type": "INFO",
-    "message": "Reviewing hypothesis: hyp_001",
+    "message": "Reviewing hypothesis: demo_1760865291883",
     "data": {
-      "field": "longevity and aging research",
-      "hypothesis_preview": "Combining senolytics with NAD+ precursors synergistically reduces markers of cellular aging"
+      "field": "machine learning",
+      "hypothesis_preview": "If a comprehensive error analysis of Latent Language Models (LLMs) in compositional machine design i"
     },
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:55:45.846Z",
+    "timestamp": "2025-10-19T09:15:04.505Z",
     "type": "API_CALL",
-    "message": "API call to OpenAI: SUCCESS (13424ms)",
+    "message": "API call to OpenAI: SUCCESS (12618ms)",
     "data": {
       "endpoint": "OpenAI",
-      "duration": 13424,
+      "duration": 12618,
       "success": true
     },
     "level": "DEBUG",
-    "duration": 13424
+    "duration": 12618
   },
   {
-    "timestamp": "2025-10-17T14:55:45.847Z",
+    "timestamp": "2025-10-19T09:15:04.506Z",
     "type": "PERFORMANCE",
-    "message": "Operation 'review_hypothesis' completed in 13424ms",
+    "message": "Operation 'review_hypothesis' completed in 12618ms",
     "data": {
       "operation": "review_hypothesis",
-      "duration": 13424,
+      "duration": 12618,
       "success": true,
       "metadata": {
-        "overall_score": 7.5,
+        "overall_score": 7.8,
         "approved": true
       }
     },
     "level": "DEBUG",
-    "duration": 13424
+    "duration": 12618
   },
   {
-    "timestamp": "2025-10-17T14:55:45.848Z",
+    "timestamp": "2025-10-19T09:15:04.506Z",
     "type": "PEER_REVIEW",
-    "message": "Peer review completed for hyp_001",
+    "message": "Peer review completed for demo_1760865291883",
     "data": {
-      "hypothesis_id": "hyp_001",
-      "overall_score": 7.5,
+      "hypothesis_id": "demo_1760865291883",
+      "overall_score": 7.8,
       "approved": true,
       "novelty": 7,
       "feasibility": 8
@@ -482,37 +316,72 @@
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:55:45.849Z",
+    "timestamp": "2025-10-19T09:15:04.507Z",
     "type": "INFO",
-    "message": "ACP Job completed: job_1760712932421_1",
+    "message": "ACP Job completed: job_1760865291886_1",
     "data": {
-      "overall_score": 7.5,
+      "overall_score": 7.8,
       "approved": true
     },
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:55:45.850Z",
+    "timestamp": "2025-10-19T09:15:04.508Z",
+    "type": "PEER_REVIEW",
+    "message": "Peer review completed for demo_1760865291883",
+    "data": {
+      "hypothesis_id": "demo_1760865291883",
+      "field": "machine learning",
+      "hypothesis": "If a comprehensive error analysis of Latent Language Models (LLMs) in compositional machine design is conducted, then it will provide insights into model limitations and potential errors, because of the inherent imperfections and biases present in any machine learning model.",
+      "methodology": "Design a series of tests and experiments on various LLMs to identify patterns and common errors. Perform statistical analysis on the results to identify the causes of these errors.",
+      "overall_score": 7.8,
+      "novelty_score": 7,
+      "feasibility_score": 8,
+      "impact_score": 9,
+      "rigor_score": 7,
+      "approved": true,
+      "reviewer_confidence": 8,
+      "feedback": "This is a promising research proposal that addresses an important aspect of machine learning. The hypothesis is clear and the methodology is well thought out, though it could benefit from more detail. The potential impact of this research is high, as it could lead to significant improvements in LLMs.",
+      "strengths": [
+        "The research focuses on a critical aspect of machine learning, i.e., error analysis of LLMs, which is often overlooked.",
+        "The hypothesis is well-defined and clear, focusing on understanding the limitations and biases of LLMs.",
+        "The proposed methodology is systematic and seems to be well-planned, involving both testing and statistical analysis."
+      ],
+      "weaknesses": [
+        "The proposal could benefit from more detail on the specific tests and experiments to be conducted.",
+        "The methodology does not specify how the causes of errors will be identified from the statistical analysis."
+      ],
+      "recommendations": [
+        "The proposal could provide more details on the types of LLMs that will be tested.",
+        "It would be beneficial to outline the specific statistical methods that will be used to identify the causes of errors.",
+        "Consider including some preliminary ideas on how the insights gained from this research could be used to improve LLMs."
+      ]
+    },
+    "agent": "ResearchCoordinator",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:15:04.508Z",
     "type": "INFO",
     "message": "✓ Peer review complete: APPROVED",
     "data": {
-      "overall_score": 7.5,
+      "overall_score": 7.8,
       "novelty": 7,
       "feasibility": 8,
-      "impact": 8
+      "impact": 9
     },
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:55:45.851Z",
+    "timestamp": "2025-10-19T09:15:04.509Z",
     "type": "INFO",
     "message": "Step 2: Requesting dataset curation...",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:55:45.852Z",
+    "timestamp": "2025-10-19T09:15:04.509Z",
     "type": "INFO",
-    "message": "ACP Job created: job_1760712945852_2 (Data Curation)",
+    "message": "ACP Job created: job_1760865304509_2 (Data Curation)",
     "data": {
       "requestor": "research_agent",
       "provider": "data_curator"
@@ -520,18 +389,18 @@
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:55:45.853Z",
+    "timestamp": "2025-10-19T09:15:04.510Z",
     "type": "INFO",
     "message": "Searching for datasets",
     "data": {
-      "hypothesis": "Combining senolytics with NAD+ precursors synergistically reduces markers of cellular aging",
-      "field": "longevity and aging research",
+      "hypothesis": "If a comprehensive error analysis of Latent Language Models (LLMs) in compositional machine design i",
+      "field": "machine learning",
       "max_results": 3
     },
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:55:45.854Z",
+    "timestamp": "2025-10-19T09:15:04.511Z",
     "type": "PERFORMANCE",
     "message": "Operation 'find_datasets' completed in 1ms",
     "data": {
@@ -539,565 +408,193 @@
       "duration": 1,
       "success": true,
       "metadata": {
-        "datasets_found": 3,
-        "field": "longevity and aging research"
+        "datasets_found": 2,
+        "field": "machine learning"
       }
     },
     "level": "DEBUG",
     "duration": 1
   },
   {
-    "timestamp": "2025-10-17T14:55:45.854Z",
-    "type": "DATA_CURATION",
-    "message": "Found 3 relevant datasets",
-    "data": {
-      "hypothesis_preview": "Combining senolytics with NAD+ precursors synergis",
-      "field": "longevity and aging research",
-      "datasets": [
-        "Human Aging Longitudinal Study",
-        "Metabolic Aging Markers",
-        "Longevity Gene Association Study"
-      ]
-    },
-    "agent": "DataCuratorAgent",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.855Z",
-    "type": "INFO",
-    "message": "ACP Job completed: job_1760712945852_2",
-    "data": {
-      "datasets_found": 3
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.855Z",
-    "type": "INFO",
-    "message": "✓ Dataset curation complete: 3 datasets found",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.856Z",
-    "type": "INFO",
-    "message": "✅ Research workflow complete: Ready for on-chain proposal!",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.857Z",
-    "type": "INFO",
-    "message": "Peer review workflow recorded",
-    "data": {
-      "hypothesis_id": "hyp_001",
-      "approved": true,
-      "datasets_found": 3,
-      "ready_for_proposal": true
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.857Z",
-    "type": "INFO",
-    "message": "✅ Hypothesis ready for on-chain proposal!",
-    "data": {
-      "hypothesis_id": "hyp_001",
-      "overall_score": 7.5,
-      "datasets_found": 3
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.858Z",
-    "type": "INFO",
-    "message": "\n📊 PEER REVIEW RESULTS:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.858Z",
-    "type": "INFO",
-    "message": "  Overall Score: 7.5/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.859Z",
-    "type": "INFO",
-    "message": "  Novelty: 7/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.859Z",
-    "type": "INFO",
-    "message": "  Feasibility: 8/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.859Z",
-    "type": "INFO",
-    "message": "  Impact: 8/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.860Z",
-    "type": "INFO",
-    "message": "  Rigor: 7/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.861Z",
-    "type": "INFO",
-    "message": "  Approved: ✅ YES",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.861Z",
-    "type": "INFO",
-    "message": "  Reviewer Confidence: 8/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.861Z",
-    "type": "INFO",
-    "message": "\n💪 Strengths:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.862Z",
-    "type": "INFO",
-    "message": "  1. The hypothesis is innovative and seeks to combine two promising areas of aging research: senolytics and NAD+ precursors.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.862Z",
-    "type": "INFO",
-    "message": "  2. The proposed methodology is well-structured and includes a control group for comparison.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.863Z",
-    "type": "INFO",
-    "message": "  3. The study has the potential to significantly advance the field of aging research if the combination therapy proves effective.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.863Z",
-    "type": "INFO",
-    "message": "\n⚠️  Weaknesses:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.864Z",
-    "type": "INFO",
-    "message": "  1. The study does not account for potential confounding factors such as lifestyle, diet, and genetic predispositions that could affect cellular aging markers.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.864Z",
-    "type": "INFO",
-    "message": "  2. The short duration of the study (12 weeks) may not be enough to observe significant changes in the markers of cellular aging.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.865Z",
-    "type": "INFO",
-    "message": "  3. The study does not specify the types of senolytics and NAD+ precursors to be used, which could affect the results.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.865Z",
-    "type": "INFO",
-    "message": "\n💡 Recommendations:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.866Z",
-    "type": "INFO",
-    "message": "  1. Consider extending the duration of the study or implementing follow-up measurements to detect long-term effects.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.866Z",
-    "type": "INFO",
-    "message": "  2. Include a detailed plan for controlling confounding factors in the study design.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.866Z",
-    "type": "INFO",
-    "message": "  3. Specify the types and dosages of senolytics and NAD+ precursors to be used.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.867Z",
-    "type": "INFO",
-    "message": "\n📚 DATASETS FOUND:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.867Z",
-    "type": "INFO",
-    "message": "\n  1. Human Aging Longitudinal Study",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.868Z",
-    "type": "INFO",
-    "message": "     Source: UCSD Aging Center",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.869Z",
-    "type": "INFO",
-    "message": "     URL: https://example.com/aging-data",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.869Z",
-    "type": "INFO",
-    "message": "     Size: 2.5 GB",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.869Z",
-    "type": "INFO",
-    "message": "     Format: CSV, JSON",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.870Z",
-    "type": "INFO",
-    "message": "     Relevance: 6/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.870Z",
-    "type": "INFO",
-    "message": "     Access: public",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.871Z",
-    "type": "INFO",
-    "message": "\n  2. Metabolic Aging Markers",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.871Z",
-    "type": "INFO",
-    "message": "     Source: Metabolomics Workbench",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.872Z",
-    "type": "INFO",
-    "message": "     URL: https://example.com/metabolic-aging",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.872Z",
-    "type": "INFO",
-    "message": "     Size: 450 MB",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.873Z",
-    "type": "INFO",
-    "message": "     Format: mzML, CSV",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.873Z",
-    "type": "INFO",
-    "message": "     Relevance: 6/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.874Z",
-    "type": "INFO",
-    "message": "     Access: public",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.874Z",
-    "type": "INFO",
-    "message": "\n  3. Longevity Gene Association Study",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.874Z",
-    "type": "INFO",
-    "message": "     Source: NIH GenBank",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.875Z",
-    "type": "INFO",
-    "message": "     URL: https://example.com/longevity-gwas",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.876Z",
-    "type": "INFO",
-    "message": "     Size: 1.2 GB",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.876Z",
-    "type": "INFO",
-    "message": "     Format: VCF, PLINK",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.876Z",
-    "type": "INFO",
-    "message": "     Relevance: 4/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.877Z",
-    "type": "INFO",
-    "message": "     Access: public",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.877Z",
-    "type": "INFO",
-    "message": "\n🎯 FINAL STATUS:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.878Z",
-    "type": "INFO",
-    "message": "  Ready for Proposal: ✅ YES",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:45.878Z",
-    "type": "INFO",
-    "message": "\n  🚀 This hypothesis can proceed to on-chain proposal creation!",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:47.881Z",
-    "type": "INFO",
-    "message": "\n================================================================================",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:47.882Z",
-    "type": "INFO",
-    "message": "Testing Hypothesis: hyp_002",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:47.882Z",
-    "type": "INFO",
-    "message": "================================================================================\n",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:47.882Z",
-    "type": "INFO",
-    "message": "📝 Hypothesis:",
-    "data": {
-      "hypothesis": "Daily meditation practice of 30 minutes increases hippocampal volume in adults over 60..."
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:47.883Z",
-    "type": "INFO",
-    "message": "🚀 Initiating multi-agent research workflow",
-    "data": {
-      "hypothesis_id": "hyp_002",
-      "field": "neuroscience and cognitive aging"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:47.883Z",
-    "type": "INFO",
-    "message": "🔄 Starting multi-agent research workflow",
-    "data": {
-      "hypothesis_id": "hyp_002",
-      "field": "neuroscience and cognitive aging"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:47.884Z",
-    "type": "INFO",
-    "message": "Step 1: Requesting peer review...",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:47.884Z",
-    "type": "INFO",
-    "message": "ACP Job created: job_1760712947884_3 (Peer Review)",
-    "data": {
-      "requestor": "research_agent",
-      "provider": "peer_reviewer"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:55:47.885Z",
-    "type": "INFO",
-    "message": "Reviewing hypothesis: hyp_002",
-    "data": {
-      "field": "neuroscience and cognitive aging",
-      "hypothesis_preview": "Daily meditation practice of 30 minutes increases hippocampal volume in adults over 60"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.200Z",
-    "type": "API_CALL",
-    "message": "API call to OpenAI: SUCCESS (12315ms)",
-    "data": {
-      "endpoint": "OpenAI",
-      "duration": 12315,
-      "success": true
-    },
-    "level": "DEBUG",
-    "duration": 12315
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.201Z",
-    "type": "PERFORMANCE",
-    "message": "Operation 'review_hypothesis' completed in 12315ms",
-    "data": {
-      "operation": "review_hypothesis",
-      "duration": 12315,
-      "success": true,
-      "metadata": {
-        "overall_score": 8,
-        "approved": true
-      }
-    },
-    "level": "DEBUG",
-    "duration": 12315
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.201Z",
-    "type": "PEER_REVIEW",
-    "message": "Peer review completed for hyp_002",
-    "data": {
-      "hypothesis_id": "hyp_002",
-      "overall_score": 8,
-      "approved": true,
-      "novelty": 7,
-      "feasibility": 9
-    },
-    "agent": "PeerReviewAgent",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.202Z",
-    "type": "INFO",
-    "message": "ACP Job completed: job_1760712947884_3",
-    "data": {
-      "overall_score": 8,
-      "approved": true
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.203Z",
-    "type": "INFO",
-    "message": "✓ Peer review complete: APPROVED",
-    "data": {
-      "overall_score": 8,
-      "novelty": 7,
-      "feasibility": 9,
-      "impact": 8
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.204Z",
-    "type": "INFO",
-    "message": "Step 2: Requesting dataset curation...",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.204Z",
-    "type": "INFO",
-    "message": "ACP Job created: job_1760712960204_4 (Data Curation)",
-    "data": {
-      "requestor": "research_agent",
-      "provider": "data_curator"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.205Z",
-    "type": "INFO",
-    "message": "Searching for datasets",
-    "data": {
-      "hypothesis": "Daily meditation practice of 30 minutes increases hippocampal volume in adults over 60",
-      "field": "neuroscience and cognitive aging",
-      "max_results": 3
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.205Z",
-    "type": "PERFORMANCE",
-    "message": "Operation 'find_datasets' completed in 0ms",
-    "data": {
-      "operation": "find_datasets",
-      "duration": 0,
-      "success": true,
-      "metadata": {
-        "datasets_found": 2,
-        "field": "neuroscience and cognitive aging"
-      }
-    },
-    "level": "DEBUG",
-    "duration": 0
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.206Z",
+    "timestamp": "2025-10-19T09:15:04.511Z",
     "type": "DATA_CURATION",
     "message": "Found 2 relevant datasets",
     "data": {
-      "hypothesis_preview": "Daily meditation practice of 30 minutes increases ",
-      "field": "neuroscience and cognitive aging",
+      "hypothesis_preview": "If a comprehensive error analysis of Latent Langua",
+      "field": "machine learning",
       "datasets": [
-        "Human Aging Longitudinal Study",
-        "Metabolic Aging Markers"
+        "NAD+ Metabolism Dataset",
+        "Autophagy Pathway Analysis"
       ]
     },
     "agent": "DataCuratorAgent",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:56:00.207Z",
+    "timestamp": "2025-10-19T09:15:04.512Z",
     "type": "INFO",
-    "message": "ACP Job completed: job_1760712960204_4",
+    "message": "ACP Job completed: job_1760865304509_2",
     "data": {
       "datasets_found": 2
     },
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:56:00.208Z",
+    "timestamp": "2025-10-19T09:15:04.513Z",
     "type": "INFO",
     "message": "✓ Dataset curation complete: 2 datasets found",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:56:00.208Z",
+    "timestamp": "2025-10-19T09:15:04.514Z",
     "type": "INFO",
     "message": "✅ Research workflow complete: Ready for on-chain proposal!",
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:56:00.209Z",
+    "timestamp": "2025-10-19T09:15:04.516Z",
+    "type": "INFO",
+    "message": "Step 3: Creating on-chain proposal...",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:15:04.517Z",
+    "type": "INFO",
+    "message": "Creating on-chain proposal for hypothesis: demo_1760865291883",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:15:04.861Z",
+    "type": "INFO",
+    "message": "Submitting transaction to Base Sepolia...",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:15:05.923Z",
+    "type": "INFO",
+    "message": "Transaction submitted",
+    "data": {
+      "hash": "0x02bcd830c94d11c4a7744f0ba763f7a82298f317b4c101fab83df932b8e99d17"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:15:05.924Z",
+    "type": "INFO",
+    "message": "Waiting for confirmation...",
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:15:06.094Z",
+    "type": "INFO",
+    "message": "✓ Transaction confirmed!",
+    "data": {
+      "blockNumber": 32548510,
+      "gasUsed": "149855"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:15:06.101Z",
+    "type": "API_CALL",
+    "message": "API call to Base Sepolia: SUCCESS (1584ms)",
+    "data": {
+      "endpoint": "Base Sepolia",
+      "duration": 1584,
+      "success": true
+    },
+    "level": "DEBUG",
+    "duration": 1584
+  },
+  {
+    "timestamp": "2025-10-19T09:15:06.102Z",
+    "type": "PROPOSAL_CREATION",
+    "message": "Created on-chain proposal 3",
+    "data": {
+      "proposalId": "3",
+      "hypothesis_id": "demo_1760865291883",
+      "fundingAmountETH": "0.1",
+      "durationDays": "30",
+      "txHash": "0x02bcd830c94d11c4a7744f0ba763f7a82298f317b4c101fab83df932b8e99d17",
+      "blockNumber": 32548510
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:15:06.104Z",
+    "type": "INFO",
+    "message": "Proposal created successfully",
+    "data": {
+      "success": true,
+      "proposalId": "3",
+      "txHash": "0x02bcd830c94d11c4a7744f0ba763f7a82298f317b4c101fab83df932b8e99d17",
+      "blockNumber": 32548510,
+      "hypothesis_id": "demo_1760865291883",
+      "fundingAmountETH": "0.1",
+      "durationDays": "30",
+      "explorerUrl": "https://sepolia.basescan.org/tx/0x02bcd830c94d11c4a7744f0ba763f7a82298f317b4c101fab83df932b8e99d17",
+      "message": "Proposal 3 created successfully! View on BaseScan."
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:15:06.105Z",
+    "type": "INFO",
+    "message": "✅ Proposal created successfully!",
+    "data": {
+      "proposalId": "3",
+      "txHash": "0x02bcd830c94d11c4a7744f0ba763f7a82298f317b4c101fab83df932b8e99d17",
+      "explorerUrl": "https://sepolia.basescan.org/tx/0x02bcd830c94d11c4a7744f0ba763f7a82298f317b4c101fab83df932b8e99d17"
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:15:06.106Z",
+    "type": "PROPOSAL_CREATED",
+    "message": "Created proposal 3",
+    "data": {
+      "proposalId": "3",
+      "hypothesis_id": "demo_1760865291883",
+      "hypothesis": "If a comprehensive error analysis of Latent Language Models (LLMs) in compositional machine design is conducted, then it will provide insights into model limitations and potential errors, because of the inherent imperfections and biases present in any machine learning model.",
+      "methodology": "Design a series of tests and experiments on various LLMs to identify patterns and common errors. Perform statistical analysis on the results to identify the causes of these errors.",
+      "field": "machine learning",
+      "fundingGoal": "0.1 ETH",
+      "duration": 30,
+      "txHash": "0x02bcd830c94d11c4a7744f0ba763f7a82298f317b4c101fab83df932b8e99d17",
+      "blockNumber": 32548510,
+      "explorerUrl": "https://sepolia.basescan.org/tx/0x02bcd830c94d11c4a7744f0ba763f7a82298f317b4c101fab83df932b8e99d17",
+      "datasets": [
+        {
+          "name": "NAD+ Metabolism Dataset",
+          "source": "Human Metabolome Database",
+          "url": "https://example.com/nad-metabolism",
+          "description": "Comprehensive NAD+ metabolite measurements across age groups",
+          "size": "120 MB",
+          "format": "CSV, XML",
+          "relevance_score": 2,
+          "access": "public"
+        },
+        {
+          "name": "Autophagy Pathway Analysis",
+          "source": "KEGG Database",
+          "url": "https://example.com/autophagy-pathways",
+          "description": "Pathway analysis data for autophagy-related genes and proteins",
+          "size": "200 MB",
+          "format": "KGML, JSON",
+          "relevance_score": 2,
+          "access": "public"
+        }
+      ],
+      "peer_review_score": 7.8
+    },
+    "level": "INFO"
+  },
+  {
+    "timestamp": "2025-10-19T09:15:06.106Z",
     "type": "INFO",
     "message": "Peer review workflow recorded",
     "data": {
-      "hypothesis_id": "hyp_002",
+      "hypothesis_id": "demo_1760865291883",
       "approved": true,
       "datasets_found": 2,
       "ready_for_proposal": true
@@ -1105,2293 +602,13 @@
     "level": "INFO"
   },
   {
-    "timestamp": "2025-10-17T14:56:00.209Z",
+    "timestamp": "2025-10-19T09:15:06.106Z",
     "type": "INFO",
     "message": "✅ Hypothesis ready for on-chain proposal!",
     "data": {
-      "hypothesis_id": "hyp_002",
-      "overall_score": 8,
+      "hypothesis_id": "demo_1760865291883",
+      "overall_score": 7.8,
       "datasets_found": 2
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.210Z",
-    "type": "INFO",
-    "message": "\n📊 PEER REVIEW RESULTS:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.211Z",
-    "type": "INFO",
-    "message": "  Overall Score: 8/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.212Z",
-    "type": "INFO",
-    "message": "  Novelty: 7/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.213Z",
-    "type": "INFO",
-    "message": "  Feasibility: 9/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.213Z",
-    "type": "INFO",
-    "message": "  Impact: 8/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.223Z",
-    "type": "INFO",
-    "message": "  Rigor: 8/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.224Z",
-    "type": "INFO",
-    "message": "  Approved: ✅ YES",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.225Z",
-    "type": "INFO",
-    "message": "  Reviewer Confidence: 9/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.226Z",
-    "type": "INFO",
-    "message": "\n💪 Strengths:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.227Z",
-    "type": "INFO",
-    "message": "  1. The hypothesis focuses on a non-invasive, easy-to-implement intervention (meditation) that can be beneficial for a large population.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.228Z",
-    "type": "INFO",
-    "message": "  2. The use of MRI imaging to measure hippocampal volume is a reliable method.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.229Z",
-    "type": "INFO",
-    "message": "  3. The inclusion of a control group strengthens the study design.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.230Z",
-    "type": "INFO",
-    "message": "\n⚠️  Weaknesses:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.230Z",
-    "type": "INFO",
-    "message": "  1. The study does not consider the potential impact of other lifestyle factors that might affect hippocampal volume.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.231Z",
-    "type": "INFO",
-    "message": "  2. The study does not specify the type of meditation to be practiced, which could affect the results.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.232Z",
-    "type": "INFO",
-    "message": "  3. The study does not account for individual variations in meditation experience and capacity.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.233Z",
-    "type": "INFO",
-    "message": "\n💡 Recommendations:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.233Z",
-    "type": "INFO",
-    "message": "  1. Consider adjusting the study design to account for other potential influencing factors on hippocampal volume such as diet, exercise, and sleep.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.234Z",
-    "type": "INFO",
-    "message": "  2. Specify the type of meditation to be practiced and consider the potential impact of different meditation types on the results.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.235Z",
-    "type": "INFO",
-    "message": "  3. Consider including a pre-study assessment of meditation experience and capacity to better understand the individual variations.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.236Z",
-    "type": "INFO",
-    "message": "\n📚 DATASETS FOUND:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.236Z",
-    "type": "INFO",
-    "message": "\n  1. Human Aging Longitudinal Study",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.237Z",
-    "type": "INFO",
-    "message": "     Source: UCSD Aging Center",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.238Z",
-    "type": "INFO",
-    "message": "     URL: https://example.com/aging-data",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.238Z",
-    "type": "INFO",
-    "message": "     Size: 2.5 GB",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.239Z",
-    "type": "INFO",
-    "message": "     Format: CSV, JSON",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.240Z",
-    "type": "INFO",
-    "message": "     Relevance: 4/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.241Z",
-    "type": "INFO",
-    "message": "     Access: public",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.241Z",
-    "type": "INFO",
-    "message": "\n  2. Metabolic Aging Markers",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.242Z",
-    "type": "INFO",
-    "message": "     Source: Metabolomics Workbench",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.243Z",
-    "type": "INFO",
-    "message": "     URL: https://example.com/metabolic-aging",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.244Z",
-    "type": "INFO",
-    "message": "     Size: 450 MB",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.244Z",
-    "type": "INFO",
-    "message": "     Format: mzML, CSV",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.245Z",
-    "type": "INFO",
-    "message": "     Relevance: 2/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.245Z",
-    "type": "INFO",
-    "message": "     Access: public",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.247Z",
-    "type": "INFO",
-    "message": "\n🎯 FINAL STATUS:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.247Z",
-    "type": "INFO",
-    "message": "  Ready for Proposal: ✅ YES",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:00.248Z",
-    "type": "INFO",
-    "message": "\n  🚀 This hypothesis can proceed to on-chain proposal creation!",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:02.250Z",
-    "type": "INFO",
-    "message": "\n================================================================================",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:02.251Z",
-    "type": "INFO",
-    "message": "Testing Hypothesis: hyp_003",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:02.252Z",
-    "type": "INFO",
-    "message": "================================================================================\n",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:02.253Z",
-    "type": "INFO",
-    "message": "📝 Hypothesis:",
-    "data": {
-      "hypothesis": "Eating chocolate every day cures all diseases..."
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:02.254Z",
-    "type": "INFO",
-    "message": "🚀 Initiating multi-agent research workflow",
-    "data": {
-      "hypothesis_id": "hyp_003",
-      "field": "nutrition"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:02.255Z",
-    "type": "INFO",
-    "message": "🔄 Starting multi-agent research workflow",
-    "data": {
-      "hypothesis_id": "hyp_003",
-      "field": "nutrition"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:02.256Z",
-    "type": "INFO",
-    "message": "Step 1: Requesting peer review...",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:02.258Z",
-    "type": "INFO",
-    "message": "ACP Job created: job_1760712962258_5 (Peer Review)",
-    "data": {
-      "requestor": "research_agent",
-      "provider": "peer_reviewer"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:02.259Z",
-    "type": "INFO",
-    "message": "Reviewing hypothesis: hyp_003",
-    "data": {
-      "field": "nutrition",
-      "hypothesis_preview": "Eating chocolate every day cures all diseases"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.796Z",
-    "type": "API_CALL",
-    "message": "API call to OpenAI: SUCCESS (13537ms)",
-    "data": {
-      "endpoint": "OpenAI",
-      "duration": 13537,
-      "success": true
-    },
-    "level": "DEBUG",
-    "duration": 13537
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.797Z",
-    "type": "PERFORMANCE",
-    "message": "Operation 'review_hypothesis' completed in 13537ms",
-    "data": {
-      "operation": "review_hypothesis",
-      "duration": 13537,
-      "success": true,
-      "metadata": {
-        "overall_score": 3.5,
-        "approved": false
-      }
-    },
-    "level": "DEBUG",
-    "duration": 13537
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.800Z",
-    "type": "PEER_REVIEW",
-    "message": "Peer review completed for hyp_003",
-    "data": {
-      "hypothesis_id": "hyp_003",
-      "overall_score": 3.5,
-      "approved": false,
-      "novelty": 2,
-      "feasibility": 1
-    },
-    "agent": "PeerReviewAgent",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.802Z",
-    "type": "INFO",
-    "message": "ACP Job completed: job_1760712962258_5",
-    "data": {
-      "overall_score": 3.5,
-      "approved": false
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.803Z",
-    "type": "INFO",
-    "message": "✓ Peer review complete: NEEDS IMPROVEMENT",
-    "data": {
-      "overall_score": 3.5,
-      "novelty": 2,
-      "feasibility": 1,
-      "impact": 10
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.804Z",
-    "type": "INFO",
-    "message": "⚠️  Hypothesis not approved, skipping dataset curation",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.806Z",
-    "type": "INFO",
-    "message": "Recommendations for improvement:",
-    "data": {
-      "weaknesses": [
-        "The hypothesis is overly broad and lacks specificity",
-        "The methodology is poorly designed, with no control group or clear parameters for measuring 'getting better'",
-        "The claim that chocolate can cure 'all diseases' is unsupported by existing scientific literature and highly unlikely to be true"
-      ],
-      "recommendations": [
-        "Narrow down the scope of the hypothesis to focus on a specific disease or group of diseases",
-        "Design a more rigorous methodology that includes a control group and clear, measurable outcomes",
-        "Conduct a literature review to identify any existing research on the health benefits of chocolate and use this to inform your hypothesis and methodology"
-      ]
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.807Z",
-    "type": "INFO",
-    "message": "⏸️  Research workflow complete: Not ready for proposal yet",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.808Z",
-    "type": "INFO",
-    "message": "Peer review workflow recorded",
-    "data": {
-      "hypothesis_id": "hyp_003",
-      "approved": false,
-      "datasets_found": 0,
-      "ready_for_proposal": false
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.809Z",
-    "type": "INFO",
-    "message": "❌ Hypothesis needs improvement",
-    "data": {
-      "hypothesis_id": "hyp_003",
-      "weaknesses": [
-        "The hypothesis is overly broad and lacks specificity",
-        "The methodology is poorly designed, with no control group or clear parameters for measuring 'getting better'",
-        "The claim that chocolate can cure 'all diseases' is unsupported by existing scientific literature and highly unlikely to be true"
-      ]
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.811Z",
-    "type": "INFO",
-    "message": "\n📊 PEER REVIEW RESULTS:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.812Z",
-    "type": "INFO",
-    "message": "  Overall Score: 3.5/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.813Z",
-    "type": "INFO",
-    "message": "  Novelty: 2/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.814Z",
-    "type": "INFO",
-    "message": "  Feasibility: 1/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.815Z",
-    "type": "INFO",
-    "message": "  Impact: 10/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.816Z",
-    "type": "INFO",
-    "message": "  Rigor: 1/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.816Z",
-    "type": "INFO",
-    "message": "  Approved: ❌ NO",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.817Z",
-    "type": "INFO",
-    "message": "  Reviewer Confidence: 1/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.818Z",
-    "type": "INFO",
-    "message": "\n💪 Strengths:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.819Z",
-    "type": "INFO",
-    "message": "  1. The hypothesis is simple and straightforward",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.820Z",
-    "type": "INFO",
-    "message": "  2. If proven true, it could have a significant impact on human health",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.821Z",
-    "type": "INFO",
-    "message": "\n⚠️  Weaknesses:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.822Z",
-    "type": "INFO",
-    "message": "  1. The hypothesis is overly broad and lacks specificity",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.822Z",
-    "type": "INFO",
-    "message": "  2. The methodology is poorly designed, with no control group or clear parameters for measuring 'getting better'",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.823Z",
-    "type": "INFO",
-    "message": "  3. The claim that chocolate can cure 'all diseases' is unsupported by existing scientific literature and highly unlikely to be true",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.824Z",
-    "type": "INFO",
-    "message": "\n💡 Recommendations:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.825Z",
-    "type": "INFO",
-    "message": "  1. Narrow down the scope of the hypothesis to focus on a specific disease or group of diseases",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.825Z",
-    "type": "INFO",
-    "message": "  2. Design a more rigorous methodology that includes a control group and clear, measurable outcomes",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.826Z",
-    "type": "INFO",
-    "message": "  3. Conduct a literature review to identify any existing research on the health benefits of chocolate and use this to inform your hypothesis and methodology",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.827Z",
-    "type": "INFO",
-    "message": "\n🎯 FINAL STATUS:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.828Z",
-    "type": "INFO",
-    "message": "  Ready for Proposal: ❌ NO",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:15.828Z",
-    "type": "INFO",
-    "message": "\n  ❌ Hypothesis needs improvement based on peer review feedback.",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.830Z",
-    "type": "INFO",
-    "message": "\n\n================================================================================",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.831Z",
-    "type": "INFO",
-    "message": "🤖 AGENT STATES SUMMARY",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.833Z",
-    "type": "INFO",
-    "message": "================================================================================\n",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.833Z",
-    "type": "INFO",
-    "message": "👨‍🔬 Peer Review Agent:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.834Z",
-    "type": "INFO",
-    "message": "  Reviews Completed: 3",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.835Z",
-    "type": "INFO",
-    "message": "  Average Score: 6.33/10",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.836Z",
-    "type": "INFO",
-    "message": "  Approved: 2",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.837Z",
-    "type": "INFO",
-    "message": "  Rejected: 1",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.838Z",
-    "type": "INFO",
-    "message": "  Status: active",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.839Z",
-    "type": "INFO",
-    "message": "\n📚 Data Curator Agent:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.840Z",
-    "type": "INFO",
-    "message": "  Searches Performed: 2",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.841Z",
-    "type": "INFO",
-    "message": "  Datasets Found: 5",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.842Z",
-    "type": "INFO",
-    "message": "  Data Sources: Kaggle, UCI ML, PubMed Central, data.gov",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.842Z",
-    "type": "INFO",
-    "message": "  Status: idle",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.844Z",
-    "type": "INFO",
-    "message": "\n\n================================================================================",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.845Z",
-    "type": "INFO",
-    "message": "📋 ACP JOBS SUMMARY",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.846Z",
-    "type": "INFO",
-    "message": "================================================================================\n",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.847Z",
-    "type": "INFO",
-    "message": "Total Jobs Created: 5",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.848Z",
-    "type": "INFO",
-    "message": "✅ Completed: 5",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.848Z",
-    "type": "INFO",
-    "message": "❌ Failed: 0",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.849Z",
-    "type": "INFO",
-    "message": "\n📊 Job Details:",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.851Z",
-    "type": "INFO",
-    "message": "\n  Job ID: job_1760712932421_1",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.852Z",
-    "type": "INFO",
-    "message": "  Task: review_hypothesis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.853Z",
-    "type": "INFO",
-    "message": "  Provider: peer_reviewer",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.854Z",
-    "type": "INFO",
-    "message": "  Status: completed",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.854Z",
-    "type": "INFO",
-    "message": "  Payment: 5 VIRTUAL",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.856Z",
-    "type": "INFO",
-    "message": "  Created: 10/17/2025, 5:55:32 PM",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.857Z",
-    "type": "INFO",
-    "message": "  Completed: 10/17/2025, 5:55:45 PM",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.858Z",
-    "type": "INFO",
-    "message": "\n  Job ID: job_1760712945852_2",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.859Z",
-    "type": "INFO",
-    "message": "  Task: find_datasets",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.860Z",
-    "type": "INFO",
-    "message": "  Provider: data_curator",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.861Z",
-    "type": "INFO",
-    "message": "  Status: completed",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.862Z",
-    "type": "INFO",
-    "message": "  Payment: 10 VIRTUAL",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.863Z",
-    "type": "INFO",
-    "message": "  Created: 10/17/2025, 5:55:45 PM",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.863Z",
-    "type": "INFO",
-    "message": "  Completed: 10/17/2025, 5:55:45 PM",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.864Z",
-    "type": "INFO",
-    "message": "\n  Job ID: job_1760712947884_3",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.865Z",
-    "type": "INFO",
-    "message": "  Task: review_hypothesis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.865Z",
-    "type": "INFO",
-    "message": "  Provider: peer_reviewer",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.866Z",
-    "type": "INFO",
-    "message": "  Status: completed",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.867Z",
-    "type": "INFO",
-    "message": "  Payment: 5 VIRTUAL",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.868Z",
-    "type": "INFO",
-    "message": "  Created: 10/17/2025, 5:55:47 PM",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.868Z",
-    "type": "INFO",
-    "message": "  Completed: 10/17/2025, 5:56:00 PM",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.869Z",
-    "type": "INFO",
-    "message": "\n  Job ID: job_1760712960204_4",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.870Z",
-    "type": "INFO",
-    "message": "  Task: find_datasets",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.871Z",
-    "type": "INFO",
-    "message": "  Provider: data_curator",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.871Z",
-    "type": "INFO",
-    "message": "  Status: completed",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.872Z",
-    "type": "INFO",
-    "message": "  Payment: 10 VIRTUAL",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.872Z",
-    "type": "INFO",
-    "message": "  Created: 10/17/2025, 5:56:00 PM",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.873Z",
-    "type": "INFO",
-    "message": "  Completed: 10/17/2025, 5:56:00 PM",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.873Z",
-    "type": "INFO",
-    "message": "\n  Job ID: job_1760712962258_5",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.874Z",
-    "type": "INFO",
-    "message": "  Task: review_hypothesis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.875Z",
-    "type": "INFO",
-    "message": "  Provider: peer_reviewer",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.876Z",
-    "type": "INFO",
-    "message": "  Status: completed",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.877Z",
-    "type": "INFO",
-    "message": "  Payment: 5 VIRTUAL",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.878Z",
-    "type": "INFO",
-    "message": "  Created: 10/17/2025, 5:56:02 PM",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.878Z",
-    "type": "INFO",
-    "message": "  Completed: 10/17/2025, 5:56:15 PM",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.879Z",
-    "type": "INFO",
-    "message": "\n\n✅ All tests completed successfully!",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-17T14:56:17.880Z",
-    "type": "INFO",
-    "message": "\n🎉 Test suite finished!",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:15.159Z",
-    "type": "INFO",
-    "message": "Science Agent initialized",
-    "data": {
-      "name": "Dr. ScienceDAO",
-      "field": "longevity",
-      "workers": [
-        "researchWorker"
-      ],
-      "api_key_set": true
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:15.232Z",
-    "type": "INFO",
-    "message": "Starting paper fetch for topic: longevity",
-    "data": {
-      "topic": "longevity",
-      "maxResults": 3
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:15.236Z",
-    "type": "INFO",
-    "message": "Requesting arXiv API: http://export.arxiv.org/api/query?search_query=all:longevity&start=0&max_results=3&sortBy=submittedDate&sortOrder=descending",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:16.256Z",
-    "type": "PAPER_FETCH",
-    "message": "Fetched 3 papers on topic: longevity",
-    "data": {
-      "topic": "longevity",
-      "count": 3
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:19.263Z",
-    "type": "INFO",
-    "message": "Starting analysis for paper: Development of a Linear Guide-Rail Testbed for Physically Emulating ISAM Operations",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:19.265Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for paper analysis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:27.755Z",
-    "type": "INFO",
-    "message": "Received analysis from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:27.846Z",
-    "type": "PAPER_ANALYSIS",
-    "message": "Analyzed paper: Development of a Linear Guide-Rail Testbed for Physically Emulating ISAM Operations",
-    "data": {
-      "paperTitle": "Development of a Linear Guide-Rail Testbed for Physically Emulating ISAM Operations",
-      "findings": {
-        "findings": [
-          "In-Space Servicing, Assembly, and Manufacturing (ISAM) operations can improve the longevity, capacity, mobility, and expandability of existing and future space assets.",
-          "Serial robotic manipulators are vital in accomplishing ISAM operations.",
-          "The movement of a robotic arm on a free-flying satellite presents a complex controls problem."
-        ],
-        "methodology": "The paper seems to focus on theoretical analysis and simulation studies, although the exact methodology is not clear from the abstract alone. It appears to involve the development of a Linear Guide-Rail Testbed for physically emulating ISAM operations.",
-        "gaps": [
-          "The exact perturbation forces and motions associated with the movement of a robotic arm on a free-flying satellite need further investigation.",
-          "The practical implementation and testing of the Linear Guide-Rail Testbed is not mentioned in the abstract."
-        ],
-        "next_steps": [
-          "Conduct further studies to understand the perturbation forces and motions associated with the movement of a robotic arm on a free-flying satellite.",
-          "Develop and test a practical implementation of the Linear Guide-Rail Testbed.",
-          "Investigate other potential solutions for emulating ISAM operations."
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:27.850Z",
-    "type": "INFO",
-    "message": "Starting analysis for paper: Recent Advances in Microfluidics and Bioelectronics for Three-Dimensional Organoid Interfaces",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:27.853Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for paper analysis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:37.237Z",
-    "type": "INFO",
-    "message": "Received analysis from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:37.239Z",
-    "type": "PAPER_ANALYSIS",
-    "message": "Analyzed paper: Recent Advances in Microfluidics and Bioelectronics for Three-Dimensional Organoid Interfaces",
-    "data": {
-      "paperTitle": "Recent Advances in Microfluidics and Bioelectronics for Three-Dimensional Organoid Interfaces",
-      "findings": {
-        "findings": [
-          "Organoids offer a promising alternative in biomedical research and clinical medicine, with better feature recapitulation than 2D cultures.",
-          "Organoids have more consistent responses with clinical results when compared to animal models.",
-          "Major challenges exist in the longevity of culture, the reproducibility of organoid properties, and the development of non-disruptive monitoring methods.",
-          "Recent advances in materials and microfabrication methods, such as 3D printing and compressive buckling, have shown potential in addressing these challenges."
-        ],
-        "methodology": "The paper reviews recent advances in materials and microfabrication methods, such as 3D printing and compressive buckling, and their applications in organoid research. The authors compare the performance of organoids with 2D cultures and animal models based on literature review.",
-        "gaps": [
-          "There is a lack of effective methods to prolong the longevity of organoid culture.",
-          "The reproducibility of organoid properties needs to be improved.",
-          "Non-disruptive monitoring methods for organoids are yet to be developed."
-        ],
-        "next_steps": [
-          "Investigate new materials and microfabrication methods to improve the longevity of organoid culture.",
-          "Develop techniques to enhance the reproducibility of organoid properties.",
-          "Design non-disruptive monitoring methods for organoids to facilitate real-time observation and analysis."
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:37.242Z",
-    "type": "INFO",
-    "message": "Starting analysis for paper: SPAD: Specialized Prefill and Decode Hardware for Disaggregated LLM Inference",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:37.243Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for paper analysis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:50.243Z",
-    "type": "INFO",
-    "message": "Received analysis from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:50.247Z",
-    "type": "PAPER_ANALYSIS",
-    "message": "Analyzed paper: SPAD: Specialized Prefill and Decode Hardware for Disaggregated LLM Inference",
-    "data": {
-      "paperTitle": "SPAD: Specialized Prefill and Decode Hardware for Disaggregated LLM Inference",
-      "findings": {
-        "findings": [
-          "Large Language Models (LLMs) have two distinct phases for inference: a compute-bound prefill phase and a memory-bound decode phase.",
-          "Current datacenter GPUs and TPUs are not well-suited to the distinct requirements of each phase.",
-          "Prefill-decode disaggregation, which runs each phase on separate hardware, has been proposed as a solution."
-        ],
-        "methodology": "The study uses a combination of hardware analysis and modeling to examine the performance of current datacenter GPUs and TPUs in handling the distinct phases of LLM inference. It also explores the potential benefits of prefill-decode disaggregation.",
-        "gaps": [
-          "The study does not provide a detailed analysis of the performance of different types of hardware in the prefill and decode phases.",
-          "The potential drawbacks and limitations of prefill-decode disaggregation are not fully explored.",
-          "The study does not consider the potential impact of future advancements in hardware technology on the performance of LLM inference."
-        ],
-        "next_steps": [
-          "Conduct a more detailed analysis of the performance of different types of hardware in the prefill and decode phases.",
-          "Investigate the potential drawbacks and limitations of prefill-decode disaggregation.",
-          "Consider the potential impact of future advancements in hardware technology on the performance of LLM inference."
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:50.249Z",
-    "type": "INFO",
-    "message": "Starting hypothesis generation for field: longevity",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:54:50.253Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for hypothesis generation",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:55:12.976Z",
-    "type": "INFO",
-    "message": "Received hypotheses from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:55:12.977Z",
-    "type": "HYPOTHESIS_GENERATION",
-    "message": "Generated hypothesis",
-    "data": {
-      "hypothesis": "Generated 3 hypotheses for longevity",
-      "scores": {
-        "count": 3,
-        "field": "longevity",
-        "scores": [
-          8.25,
-          8,
-          7.5
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:01.561Z",
-    "type": "INFO",
-    "message": "Science Agent initialized",
-    "data": {
-      "name": "Dr. ScienceDAO",
-      "field": "longevity",
-      "workers": [
-        "researchWorker"
-      ],
-      "api_key_set": true
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:01.581Z",
-    "type": "INFO",
-    "message": "Starting paper fetch for topic: longevity",
-    "data": {
-      "topic": "longevity",
-      "maxResults": 3
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:01.582Z",
-    "type": "INFO",
-    "message": "Requesting arXiv API: http://export.arxiv.org/api/query?search_query=all:longevity&start=0&max_results=3&sortBy=submittedDate&sortOrder=descending",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:02.070Z",
-    "type": "PAPER_FETCH",
-    "message": "Fetched 3 papers on topic: longevity",
-    "data": {
-      "topic": "longevity",
-      "count": 3
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:05.080Z",
-    "type": "INFO",
-    "message": "Starting analysis for paper: Development of a Linear Guide-Rail Testbed for Physically Emulating ISAM Operations",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:05.089Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for paper analysis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:14.012Z",
-    "type": "INFO",
-    "message": "Received analysis from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:14.013Z",
-    "type": "PAPER_ANALYSIS",
-    "message": "Analyzed paper: Development of a Linear Guide-Rail Testbed for Physically Emulating ISAM Operations",
-    "data": {
-      "paperTitle": "Development of a Linear Guide-Rail Testbed for Physically Emulating ISAM Operations",
-      "findings": {
-        "findings": [
-          "Serial robotic manipulators are crucial in accomplishing In-Space Servicing, Assembly, and Manufacturing (ISAM) operations.",
-          "The movement of a robotic arm on a free-flying satellite presents a complex controls problem."
-        ],
-        "methodology": "The study is based on the development of a Linear Guide-Rail Testbed to physically emulate ISAM operations. The focus is on the movement of a robotic arm on a free-flying satellite and the associated complex controls problem.",
-        "gaps": [
-          "The research does not provide a comprehensive solution to the complex controls problem associated with the movement of a robotic arm on a free-flying satellite.",
-          "The study does not explore other potential methods of accomplishing ISAM operations, focusing only on serial robotic manipulators."
-        ],
-        "next_steps": [
-          "Further research is needed to develop a comprehensive solution to the complex controls problem associated with the movement of a robotic arm on a free-flying satellite.",
-          "Future studies should explore other potential methods of accomplishing ISAM operations, not limiting the focus to serial robotic manipulators."
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:14.014Z",
-    "type": "INFO",
-    "message": "Starting analysis for paper: Recent Advances in Microfluidics and Bioelectronics for Three-Dimensional Organoid Interfaces",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:14.015Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for paper analysis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:22.446Z",
-    "type": "INFO",
-    "message": "Received analysis from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:22.453Z",
-    "type": "PAPER_ANALYSIS",
-    "message": "Analyzed paper: Recent Advances in Microfluidics and Bioelectronics for Three-Dimensional Organoid Interfaces",
-    "data": {
-      "paperTitle": "Recent Advances in Microfluidics and Bioelectronics for Three-Dimensional Organoid Interfaces",
-      "findings": {
-        "findings": [
-          "Organoids provide a promising alternative in biomedical research and clinical medicine, offering better feature recapitulation than 2D cultures.",
-          "Organoids show more consistent responses with clinical results when compared to animal models.",
-          "Recent advances in materials and microfabrication methods, such as 3D printing and compressive buckling, have been identified."
-        ],
-        "methodology": "The paper is a review of recent advances in the field of organoid interfaces, focusing on the use of microfluidics and bioelectronics. The authors have analyzed various studies and developments in the field, including the use of 3D printing and compressive buckling.",
-        "gaps": [
-          "Major challenges exist in the longevity of organoid culture.",
-          "There are issues with the reproducibility of organoid properties.",
-          "Development of non-disruptive monitoring methods for organoids is still an area that needs further research."
-        ],
-        "next_steps": [
-          "Further research is needed to improve the longevity of organoid culture.",
-          "Investigate methods to improve the reproducibility of organoid properties.",
-          "Develop non-disruptive monitoring methods for organoids.",
-          "Explore the potential of recent advances in materials and microfabrication methods, such as 3D printing and compressive buckling, in the field of organoid interfaces."
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:22.463Z",
-    "type": "INFO",
-    "message": "Starting analysis for paper: SPAD: Specialized Prefill and Decode Hardware for Disaggregated LLM Inference",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:22.479Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for paper analysis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:30.850Z",
-    "type": "INFO",
-    "message": "Received analysis from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:30.853Z",
-    "type": "PAPER_ANALYSIS",
-    "message": "Analyzed paper: SPAD: Specialized Prefill and Decode Hardware for Disaggregated LLM Inference",
-    "data": {
-      "paperTitle": "SPAD: Specialized Prefill and Decode Hardware for Disaggregated LLM Inference",
-      "findings": {
-        "findings": [
-          "Large Language Models (LLMs) have distinct inference phases, each with unique hardware requirements.",
-          "Current datacenter GPUs and TPUs do not efficiently meet the requirements of each phase.",
-          "Prefill-decode disaggregation, where each phase is run on separate hardware, has been proposed as a solution."
-        ],
-        "methodology": "The study uses a combination of hardware analysis and simulation to examine the efficiency of current hardware solutions for LLM inference. It also explores the potential benefits of prefill-decode disaggregation.",
-        "gaps": [
-          "The paper does not provide empirical data on the performance of the proposed prefill-decode disaggregation.",
-          "There is no comparison of the proposed method with other potential hardware solutions.",
-          "The paper does not discuss the potential cost implications of implementing prefill-decode disaggregation."
-        ],
-        "next_steps": [
-          "Conduct empirical studies to measure the performance of prefill-decode disaggregation.",
-          "Compare the proposed method with other potential hardware solutions to determine the most efficient approach.",
-          "Investigate the cost implications of implementing prefill-decode disaggregation in datacenters."
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:30.857Z",
-    "type": "INFO",
-    "message": "Starting hypothesis generation for field: longevity",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:30.859Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for hypothesis generation",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:48.219Z",
-    "type": "INFO",
-    "message": "Received hypotheses from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:48.222Z",
-    "type": "HYPOTHESIS_GENERATION",
-    "message": "Generated hypothesis",
-    "data": {
-      "hypothesis": "Generated 3 hypotheses for longevity",
-      "scores": {
-        "count": 3,
-        "field": "longevity",
-        "scores": [
-          8,
-          8,
-          7.75
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:48.225Z",
-    "type": "INFO",
-    "message": "🚀 Initiating multi-agent research workflow",
-    "data": {
-      "hypothesis_id": "demo_1760813868224",
-      "field": "longevity"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:48.226Z",
-    "type": "INFO",
-    "message": "🔄 Starting multi-agent research workflow",
-    "data": {
-      "hypothesis_id": "demo_1760813868224",
-      "field": "longevity"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:48.227Z",
-    "type": "INFO",
-    "message": "Step 1: Requesting peer review...",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:48.229Z",
-    "type": "INFO",
-    "message": "ACP Job created: job_1760813868229_1 (Peer Review)",
-    "data": {
-      "requestor": "research_agent",
-      "provider": "peer_reviewer"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:48.231Z",
-    "type": "INFO",
-    "message": "Reviewing hypothesis: demo_1760813868224",
-    "data": {
-      "field": "longevity",
-      "hypothesis_preview": "If we introduce a biofeedback mechanism into a robotic arm, then the control of the robotic arm on a"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:56.748Z",
-    "type": "API_CALL",
-    "message": "API call to OpenAI: SUCCESS (8510ms)",
-    "data": {
-      "endpoint": "OpenAI",
-      "duration": 8510,
-      "success": true
-    },
-    "level": "DEBUG",
-    "duration": 8510
-  },
-  {
-    "timestamp": "2025-10-18T18:57:56.756Z",
-    "type": "PERFORMANCE",
-    "message": "Operation 'review_hypothesis' completed in 8510ms",
-    "data": {
-      "operation": "review_hypothesis",
-      "duration": 8510,
-      "success": true,
-      "metadata": {
-        "overall_score": 5.3,
-        "approved": false
-      }
-    },
-    "level": "DEBUG",
-    "duration": 8510
-  },
-  {
-    "timestamp": "2025-10-18T18:57:56.759Z",
-    "type": "PEER_REVIEW",
-    "message": "Peer review completed for demo_1760813868224",
-    "data": {
-      "hypothesis_id": "demo_1760813868224",
-      "overall_score": 5.3,
-      "approved": false,
-      "novelty": 7,
-      "feasibility": 6
-    },
-    "agent": "PeerReviewAgent",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:56.766Z",
-    "type": "INFO",
-    "message": "ACP Job completed: job_1760813868229_1",
-    "data": {
-      "overall_score": 5.3,
-      "approved": false
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:56.767Z",
-    "type": "INFO",
-    "message": "✓ Peer review complete: NEEDS IMPROVEMENT",
-    "data": {
-      "overall_score": 5.3,
-      "novelty": 7,
-      "feasibility": 6,
-      "impact": 3
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:56.768Z",
-    "type": "INFO",
-    "message": "⚠️  Hypothesis not approved, skipping dataset curation",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:56.769Z",
-    "type": "INFO",
-    "message": "Recommendations for improvement:",
-    "data": {
-      "weaknesses": [
-        "The hypothesis and methodology don't seem to directly relate to the field of longevity.",
-        "The impact of the research on the field of longevity is unclear.",
-        "The proposed methodology lacks detail on how the performance of the robotic arms will be compared."
-      ],
-      "recommendations": [
-        "The researchers should clarify how this research relates to the field of longevity.",
-        "The researchers should provide more detail on the comparison metrics and procedures for the robotic arms.",
-        "The researchers should consider refining the hypothesis to more directly address a problem or question in the field of longevity."
-      ]
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:56.771Z",
-    "type": "INFO",
-    "message": "⏸️  Research workflow complete: Not ready for proposal yet",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:56.772Z",
-    "type": "INFO",
-    "message": "Peer review workflow recorded",
-    "data": {
-      "hypothesis_id": "demo_1760813868224",
-      "approved": false,
-      "datasets_found": 0,
-      "ready_for_proposal": false
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T18:57:56.773Z",
-    "type": "INFO",
-    "message": "❌ Hypothesis needs improvement",
-    "data": {
-      "hypothesis_id": "demo_1760813868224",
-      "weaknesses": [
-        "The hypothesis and methodology don't seem to directly relate to the field of longevity.",
-        "The impact of the research on the field of longevity is unclear.",
-        "The proposed methodology lacks detail on how the performance of the robotic arms will be compared."
-      ]
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:03:58.511Z",
-    "type": "INFO",
-    "message": "Science Agent initialized",
-    "data": {
-      "name": "Dr. ScienceDAO",
-      "field": "machine learning",
-      "workers": [
-        "researchWorker"
-      ],
-      "api_key_set": true
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:03:58.530Z",
-    "type": "INFO",
-    "message": "Starting paper fetch for topic: machine learning",
-    "data": {
-      "topic": "machine learning",
-      "maxResults": 3
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:03:58.532Z",
-    "type": "INFO",
-    "message": "Requesting arXiv API: http://export.arxiv.org/api/query?search_query=all:machine%20learning&start=0&max_results=3&sortBy=submittedDate&sortOrder=descending",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:03:59.371Z",
-    "type": "PAPER_FETCH",
-    "message": "Fetched 3 papers on topic: machine learning",
-    "data": {
-      "topic": "machine learning",
-      "count": 3
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:02.381Z",
-    "type": "INFO",
-    "message": "Starting analysis for paper: Agentic Design of Compositional Machines",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:02.384Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for paper analysis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:13.041Z",
-    "type": "INFO",
-    "message": "Received analysis from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:13.044Z",
-    "type": "PAPER_ANALYSIS",
-    "message": "Analyzed paper: Agentic Design of Compositional Machines",
-    "data": {
-      "paperTitle": "Agentic Design of Compositional Machines",
-      "findings": {
-        "findings": [
-          "The study found that large language models (LLMs) can learn to create complex machines.",
-          "The research demonstrated that these models can assemble machines from standardized components to meet functional demands in a simulated physical environment.",
-          "The study introduced a new benchmark, Compositional Machines (CoMakery), to evaluate the performance of these models in machine design tasks."
-        ],
-        "methodology": "The study used large language models to approach the task of compositional machine design. A new benchmark, Compositional Machines (CoMakery), was introduced to evaluate the performance of these models. The models were tasked with assembling machines from standardized components to meet functional demands in a simulated physical environment.",
-        "gaps": [
-          "The study does not explore how these models would perform in real-world physical environments, as the research was conducted in a simulated environment.",
-          "The research does not investigate how these models would handle non-standardized components or complex, non-compositional tasks.",
-          "The study does not provide a comparative analysis of different large language models' performance in compositional machine design tasks."
-        ],
-        "next_steps": [
-          "Future research could investigate the performance of these models in real-world physical environments.",
-          "Further studies could explore how these models handle non-standardized components or complex, non-compositional tasks.",
-          "Comparative studies could be conducted to evaluate the performance of different large language models in compositional machine design tasks."
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:13.048Z",
-    "type": "INFO",
-    "message": "Starting analysis for paper: Learning an Image Editing Model without Image Editing Pairs",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:13.052Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for paper analysis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:21.624Z",
-    "type": "INFO",
-    "message": "Received analysis from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:21.626Z",
-    "type": "PAPER_ANALYSIS",
-    "message": "Analyzed paper: Learning an Image Editing Model without Image Editing Pairs",
-    "data": {
-      "paperTitle": "Learning an Image Editing Model without Image Editing Pairs",
-      "findings": {
-        "findings": [
-          "Current image editing models that follow natural language editing instructions have achieved impressive results.",
-          "These models rely on supervised fine-tuning with large datasets of input-target pairs, which is a critical bottleneck.",
-          "Naturally occurring pairs are hard to curate at scale.",
-          "Current workarounds use synthetic training pairs that leverage the zero-shot capabilities of existing models.",
-          "This can propagate and magnify the artifacts of the pretrained model into the final training."
-        ],
-        "methodology": "The study is based on an analysis of the current state of image editing models. It investigates the limitations of these models, particularly their reliance on large datasets of input-target pairs and the use of synthetic training pairs.",
-        "gaps": [
-          "The paper does not provide a solution to the problem of curating naturally occurring pairs at scale.",
-          "The impact of the propagation and magnification of the artifacts of the pretrained model into the final training is not fully explored.",
-          "The paper does not explore alternative methods to supervised fine-tuning or the use of synthetic training pairs."
-        ],
-        "next_steps": [
-          "Research could be conducted to find ways to curate naturally occurring pairs at scale.",
-          "Further investigation could be done to fully understand the impact of the propagation and magnification of the artifacts of the pretrained model into the final training.",
-          "Exploration of alternative methods to supervised fine-tuning or the use of synthetic training pairs could be a potential area of research."
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:21.628Z",
-    "type": "INFO",
-    "message": "Starting analysis for paper: Terra: Explorable Native 3D World Model with Point Latents",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:21.631Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for paper analysis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:31.173Z",
-    "type": "INFO",
-    "message": "Received analysis from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:31.178Z",
-    "type": "PAPER_ANALYSIS",
-    "message": "Analyzed paper: Terra: Explorable Native 3D World Model with Point Latents",
-    "data": {
-      "paperTitle": "Terra: Explorable Native 3D World Model with Point Latents",
-      "findings": {
-        "findings": [
-          "Terra, a native 3D world model, can represent and generate explorable environments in an intrinsic 3D latent space.",
-          "Terra outperforms existing methods that rely on pixel-aligned representations, improving 3D consistency and modeling efficiency.",
-          "The use of point latents in Terra allows for more accurate and efficient modeling of the 3D world."
-        ],
-        "methodology": "The researchers developed Terra, a native 3D world model, and compared its performance to existing methods that rely on pixel-aligned representations. The model uses point latents to represent and generate explorable environments in an intrinsic 3D latent space.",
-        "gaps": [
-          "The paper does not provide a comprehensive comparison of Terra with other 3D world models that do not rely on pixel-aligned representations.",
-          "The paper does not discuss how Terra can be applied to real-world applications or how it can be integrated with other systems.",
-          "The limitations of Terra, such as potential computational inefficiencies or difficulties in handling complex environments, are not thoroughly discussed."
-        ],
-        "next_steps": [
-          "Conduct a comprehensive comparison of Terra with other 3D world models that do not rely on pixel-aligned representations.",
-          "Explore the potential real-world applications of Terra and how it can be integrated with other systems.",
-          "Investigate the limitations of Terra, including potential computational inefficiencies and difficulties in handling complex environments, and develop solutions to these issues."
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:31.181Z",
-    "type": "INFO",
-    "message": "Starting hypothesis generation for field: machine learning",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:31.185Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for hypothesis generation",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:46.998Z",
-    "type": "INFO",
-    "message": "Received hypotheses from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:47.002Z",
-    "type": "HYPOTHESIS_GENERATION",
-    "message": "Generated hypothesis",
-    "data": {
-      "hypothesis": "Generated 3 hypotheses for machine learning",
-      "scores": {
-        "count": 3,
-        "field": "machine learning",
-        "scores": [
-          8,
-          7.75,
-          8.25
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:47.007Z",
-    "type": "INFO",
-    "message": "🚀 Initiating multi-agent research workflow",
-    "data": {
-      "hypothesis_id": "demo_1760814287007",
-      "field": "machine learning"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:47.010Z",
-    "type": "INFO",
-    "message": "🔄 Starting multi-agent research workflow",
-    "data": {
-      "hypothesis_id": "demo_1760814287007",
-      "field": "machine learning"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:47.011Z",
-    "type": "INFO",
-    "message": "Step 1: Requesting peer review...",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:47.013Z",
-    "type": "INFO",
-    "message": "ACP Job created: job_1760814287013_1 (Peer Review)",
-    "data": {
-      "requestor": "research_agent",
-      "provider": "peer_reviewer"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:47.016Z",
-    "type": "INFO",
-    "message": "Reviewing hypothesis: demo_1760814287007",
-    "data": {
-      "field": "machine learning",
-      "hypothesis_preview": "If large language models are trained in real-world physical environments, then their performance in "
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:55.945Z",
-    "type": "API_CALL",
-    "message": "API call to OpenAI: SUCCESS (8929ms)",
-    "data": {
-      "endpoint": "OpenAI",
-      "duration": 8929,
-      "success": true
-    },
-    "level": "DEBUG",
-    "duration": 8929
-  },
-  {
-    "timestamp": "2025-10-18T19:04:55.948Z",
-    "type": "PERFORMANCE",
-    "message": "Operation 'review_hypothesis' completed in 8929ms",
-    "data": {
-      "operation": "review_hypothesis",
-      "duration": 8929,
-      "success": true,
-      "metadata": {
-        "overall_score": 5.3,
-        "approved": false
-      }
-    },
-    "level": "DEBUG",
-    "duration": 8929
-  },
-  {
-    "timestamp": "2025-10-18T19:04:55.952Z",
-    "type": "PEER_REVIEW",
-    "message": "Peer review completed for demo_1760814287007",
-    "data": {
-      "hypothesis_id": "demo_1760814287007",
-      "overall_score": 5.3,
-      "approved": false,
-      "novelty": 7,
-      "feasibility": 3
-    },
-    "agent": "PeerReviewAgent",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:55.954Z",
-    "type": "INFO",
-    "message": "ACP Job completed: job_1760814287013_1",
-    "data": {
-      "overall_score": 5.3,
-      "approved": false
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:55.956Z",
-    "type": "INFO",
-    "message": "✓ Peer review complete: NEEDS IMPROVEMENT",
-    "data": {
-      "overall_score": 5.3,
-      "novelty": 7,
-      "feasibility": 3,
-      "impact": 6
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:55.958Z",
-    "type": "INFO",
-    "message": "⚠️  Hypothesis not approved, skipping dataset curation",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:55.960Z",
-    "type": "INFO",
-    "message": "Recommendations for improvement:",
-    "data": {
-      "weaknesses": [
-        "The methodology is not clearly explained. It's unclear how 'training in real-world physical environments' would be implemented for language models, which typically learn from text data.",
-        "The feasibility of the project is questionable. It's not clear how current technology could be used to train language models in physical environments."
-      ],
-      "recommendations": [
-        "Clarify the methodology. Specifically, explain how language models would be trained in real-world physical environments.",
-        "Consider refining the hypothesis to focus on incorporating real-world data or scenarios into the training data, rather than training in physical environments.",
-        "Provide more detailed plans for how the performance of the models will be evaluated."
-      ]
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:55.962Z",
-    "type": "INFO",
-    "message": "⏸️  Research workflow complete: Not ready for proposal yet",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:55.963Z",
-    "type": "INFO",
-    "message": "Peer review workflow recorded",
-    "data": {
-      "hypothesis_id": "demo_1760814287007",
-      "approved": false,
-      "datasets_found": 0,
-      "ready_for_proposal": false
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:04:55.965Z",
-    "type": "INFO",
-    "message": "❌ Hypothesis needs improvement",
-    "data": {
-      "hypothesis_id": "demo_1760814287007",
-      "weaknesses": [
-        "The methodology is not clearly explained. It's unclear how 'training in real-world physical environments' would be implemented for language models, which typically learn from text data.",
-        "The feasibility of the project is questionable. It's not clear how current technology could be used to train language models in physical environments."
-      ]
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:19.070Z",
-    "type": "INFO",
-    "message": "Science Agent initialized",
-    "data": {
-      "name": "Dr. ScienceDAO",
-      "field": "machine learning",
-      "workers": [
-        "researchWorker"
-      ],
-      "api_key_set": true
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:19.090Z",
-    "type": "INFO",
-    "message": "Starting paper fetch for topic: machine learning",
-    "data": {
-      "topic": "machine learning",
-      "maxResults": 3
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:19.091Z",
-    "type": "INFO",
-    "message": "Requesting arXiv API: http://export.arxiv.org/api/query?search_query=all:machine%20learning&start=0&max_results=3&sortBy=submittedDate&sortOrder=descending",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:19.491Z",
-    "type": "PAPER_FETCH",
-    "message": "Fetched 3 papers on topic: machine learning",
-    "data": {
-      "topic": "machine learning",
-      "count": 3
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:22.496Z",
-    "type": "INFO",
-    "message": "Starting analysis for paper: Agentic Design of Compositional Machines",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:22.498Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for paper analysis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:31.972Z",
-    "type": "INFO",
-    "message": "Received analysis from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:31.974Z",
-    "type": "PAPER_ANALYSIS",
-    "message": "Analyzed paper: Agentic Design of Compositional Machines",
-    "data": {
-      "paperTitle": "Agentic Design of Compositional Machines",
-      "findings": {
-        "findings": [
-          "Large Language Models (LLMs) can be trained to create complex machines from standardized components.",
-          "LLMs can meet functional demands like locomotion or manipulation in a simulated physical environment.",
-          "The study introduces a new dataset, CompoNet, to support the investigation of compositional machine design."
-        ],
-        "methodology": "The research used a combination of machine learning techniques to train Large Language Models (LLMs) in the task of compositional machine design. The study also introduced a new dataset, CompoNet, to facilitate this investigation.",
-        "gaps": [
-          "The study does not explore the practical applications of these compositional machines in real-world scenarios.",
-          "The study does not investigate the limitations of the LLMs in designing complex machines.",
-          "The study does not provide a comparative analysis of the performance of LLMs with other machine learning models in compositional machine design."
-        ],
-        "next_steps": [
-          "Future research should explore the practical applications of these compositional machines in real-world scenarios.",
-          "Further investigation is needed to understand the limitations of the LLMs in designing complex machines.",
-          "A comparative analysis of the performance of LLMs with other machine learning models in compositional machine design would be beneficial for future studies."
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:31.976Z",
-    "type": "INFO",
-    "message": "Starting analysis for paper: Learning an Image Editing Model without Image Editing Pairs",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:31.978Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for paper analysis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:40.208Z",
-    "type": "INFO",
-    "message": "Received analysis from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:40.211Z",
-    "type": "PAPER_ANALYSIS",
-    "message": "Analyzed paper: Learning an Image Editing Model without Image Editing Pairs",
-    "data": {
-      "paperTitle": "Learning an Image Editing Model without Image Editing Pairs",
-      "findings": {
-        "findings": [
-          "Current image editing models have shown impressive results in following natural language editing instructions.",
-          "These models rely on supervised fine-tuning with large datasets of input-target pairs, which is a bottleneck due to the difficulty in curating such pairs at scale.",
-          "Existing workarounds use synthetic training pairs that leverage the zero-shot capabilities of existing models, but this can propagate and magnify the artifacts of the pretrained model into the final trained model."
-        ],
-        "methodology": "The study is based on a review and analysis of current image editing models, their reliance on supervised fine-tuning with large datasets of input-target pairs, and the use of synthetic training pairs as a workaround.",
-        "gaps": [
-          "The study does not provide a solution to the problem of curating large datasets of input-target pairs for supervised fine-tuning of image editing models.",
-          "The impacts of the propagation and magnification of artifacts from pretrained models into the final trained models when using synthetic training pairs are not fully explored."
-        ],
-        "next_steps": [
-          "Develop new methodologies for curating large datasets of input-target pairs for supervised fine-tuning of image editing models.",
-          "Investigate the impacts of the propagation and magnification of artifacts from pretrained models into the final trained models when using synthetic training pairs.",
-          "Explore alternative workarounds to synthetic training pairs that do not propagate or magnify the artifacts of the pretrained model."
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:40.213Z",
-    "type": "INFO",
-    "message": "Starting analysis for paper: Terra: Explorable Native 3D World Model with Point Latents",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:40.215Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for paper analysis",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:47.681Z",
-    "type": "INFO",
-    "message": "Received analysis from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:47.682Z",
-    "type": "PAPER_ANALYSIS",
-    "message": "Analyzed paper: Terra: Explorable Native 3D World Model with Point Latents",
-    "data": {
-      "paperTitle": "Terra: Explorable Native 3D World Model with Point Latents",
-      "findings": {
-        "findings": [
-          "Terra, a native 3D world model, can represent and generate explorable environments in an intrinsic 3D latent space.",
-          "Existing methods for world modeling often rely on pixel-aligned representations, which can undermine 3D consistency and modeling efficiency."
-        ],
-        "methodology": "The researchers developed a new model, Terra, which represents and generates environments in an intrinsic 3D latent space. This was likely achieved through the use of advanced machine learning algorithms and 3D modeling techniques.",
-        "gaps": [
-          "The paper does not mention how Terra performs in comparison to other existing models.",
-          "There is no discussion on the potential limitations or challenges of implementing Terra in real-world applications.",
-          "The paper does not discuss the scalability of Terra, i.e., how well it would perform with larger, more complex environments."
-        ],
-        "next_steps": [
-          "Conduct comparative studies to evaluate the performance of Terra against other existing models.",
-          "Investigate potential limitations and challenges of implementing Terra in real-world applications.",
-          "Assess the scalability of Terra with larger, more complex environments."
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:47.684Z",
-    "type": "INFO",
-    "message": "Starting hypothesis generation for field: machine learning",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:09:47.686Z",
-    "type": "INFO",
-    "message": "Calling OpenAI API for hypothesis generation",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:03.042Z",
-    "type": "INFO",
-    "message": "Received hypotheses from OpenAI",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:03.047Z",
-    "type": "HYPOTHESIS_GENERATION",
-    "message": "Generated hypothesis",
-    "data": {
-      "hypothesis": "Generated 3 hypotheses for machine learning",
-      "scores": {
-        "count": 3,
-        "field": "machine learning",
-        "scores": [
-          7.75,
-          8.5,
-          8
-        ]
-      }
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:03.052Z",
-    "type": "INFO",
-    "message": "🚀 Initiating multi-agent research workflow",
-    "data": {
-      "hypothesis_id": "demo_1760814603052",
-      "field": "machine learning"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:03.054Z",
-    "type": "INFO",
-    "message": "🔄 Starting multi-agent research workflow",
-    "data": {
-      "hypothesis_id": "demo_1760814603052",
-      "field": "machine learning"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:03.056Z",
-    "type": "INFO",
-    "message": "Step 1: Requesting peer review...",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:03.059Z",
-    "type": "INFO",
-    "message": "ACP Job created: job_1760814603058_1 (Peer Review)",
-    "data": {
-      "requestor": "research_agent",
-      "provider": "peer_reviewer"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:03.060Z",
-    "type": "INFO",
-    "message": "Reviewing hypothesis: demo_1760814603052",
-    "data": {
-      "field": "machine learning",
-      "hypothesis_preview": "If we develop practical applications of compositional machines in real-world scenarios, then the eff"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.828Z",
-    "type": "API_CALL",
-    "message": "API call to OpenAI: SUCCESS (7766ms)",
-    "data": {
-      "endpoint": "OpenAI",
-      "duration": 7766,
-      "success": true
-    },
-    "level": "DEBUG",
-    "duration": 7766
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.831Z",
-    "type": "PERFORMANCE",
-    "message": "Operation 'review_hypothesis' completed in 7766ms",
-    "data": {
-      "operation": "review_hypothesis",
-      "duration": 7766,
-      "success": true,
-      "metadata": {
-        "overall_score": 7.8,
-        "approved": true
-      }
-    },
-    "level": "DEBUG",
-    "duration": 7766
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.834Z",
-    "type": "PEER_REVIEW",
-    "message": "Peer review completed for demo_1760814603052",
-    "data": {
-      "hypothesis_id": "demo_1760814603052",
-      "overall_score": 7.8,
-      "approved": true,
-      "novelty": 8,
-      "feasibility": 7
-    },
-    "agent": "PeerReviewAgent",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.838Z",
-    "type": "INFO",
-    "message": "ACP Job completed: job_1760814603058_1",
-    "data": {
-      "overall_score": 7.8,
-      "approved": true
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.841Z",
-    "type": "INFO",
-    "message": "✓ Peer review complete: APPROVED",
-    "data": {
-      "overall_score": 7.8,
-      "novelty": 8,
-      "feasibility": 7,
-      "impact": 9
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.844Z",
-    "type": "INFO",
-    "message": "Step 2: Requesting dataset curation...",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.846Z",
-    "type": "INFO",
-    "message": "ACP Job created: job_1760814610846_2 (Data Curation)",
-    "data": {
-      "requestor": "research_agent",
-      "provider": "data_curator"
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.850Z",
-    "type": "INFO",
-    "message": "Searching for datasets",
-    "data": {
-      "hypothesis": "If we develop practical applications of compositional machines in real-world scenarios, then the eff",
-      "field": "machine learning",
-      "max_results": 3
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.854Z",
-    "type": "PERFORMANCE",
-    "message": "Operation 'find_datasets' completed in 4ms",
-    "data": {
-      "operation": "find_datasets",
-      "duration": 4,
-      "success": true,
-      "metadata": {
-        "datasets_found": 0,
-        "field": "machine learning"
-      }
-    },
-    "level": "DEBUG",
-    "duration": 4
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.856Z",
-    "type": "DATA_CURATION",
-    "message": "Found 0 relevant datasets",
-    "data": {
-      "hypothesis_preview": "If we develop practical applications of compositio",
-      "field": "machine learning",
-      "datasets": []
-    },
-    "agent": "DataCuratorAgent",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.861Z",
-    "type": "INFO",
-    "message": "ACP Job completed: job_1760814610846_2",
-    "data": {
-      "datasets_found": 0
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.864Z",
-    "type": "INFO",
-    "message": "✓ Dataset curation complete: 0 datasets found",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.867Z",
-    "type": "INFO",
-    "message": "⏸️  Research workflow complete: Not ready for proposal yet",
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.870Z",
-    "type": "INFO",
-    "message": "Peer review workflow recorded",
-    "data": {
-      "hypothesis_id": "demo_1760814603052",
-      "approved": true,
-      "datasets_found": 0,
-      "ready_for_proposal": false
-    },
-    "level": "INFO"
-  },
-  {
-    "timestamp": "2025-10-18T19:10:10.872Z",
-    "type": "INFO",
-    "message": "⚠️  Hypothesis approved but no datasets found",
-    "data": {
-      "hypothesis_id": "demo_1760814603052"
     },
     "level": "INFO"
   }
